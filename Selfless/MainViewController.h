@@ -8,10 +8,17 @@
 
 #import <UIKit/UIKit.h>
 #import "RNFrostedSidebar.h"
+#import "FeedViewController.h"
+#import "ProfileViewController.h"
+#import "CharityViewController.h"
+#import "ActivityViewController.h"
+#import "SettingsViewController.h"
+#import "AboutViewController.h"
 
-@interface MainViewController : UIViewController <RNFrostedSidebarDelegate>
+@interface MainViewController : UIViewController <RNFrostedSidebarDelegate, UIGestureRecognizerDelegate>
 
 - (IBAction)sidebarButtonPressed:(id)sender;
 @property (weak, nonatomic) IBOutlet UIButton *sidebarButton;
+@property (weak, nonatomic) IBOutlet UIView *modView;
 @property (strong, nonatomic) RNFrostedSidebar* callout;
 @end
