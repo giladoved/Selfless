@@ -60,6 +60,17 @@
     [CardIOUtilities preload];
 }
 
+#pragma mark - UIPickerView
+
+- (NSAttributedString *)pickerView:(UIPickerView *)pickerView attributedTitleForRow:(NSInteger)row forComponent:(NSInteger)component
+{
+    NSString *title = @"Preferred Charity";
+    NSAttributedString *attString = [[NSAttributedString alloc] initWithString:title attributes:@{NSForegroundColorAttributeName:[UIColor whiteColor]}];
+    
+    return attString;
+    
+}
+
 #pragma mark - User Actions
 
 - (void)scanCardClicked:(id)sender {
