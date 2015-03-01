@@ -21,4 +21,5 @@
 @property (weak, nonatomic) IBOutlet UIButton *sidebarButton;
 @property (weak, nonatomic) IBOutlet UIView *modView;
 @property (strong, nonatomic) RNFrostedSidebar* callout;
+@property (strong, nonatomic) id instagramResult;
 @end

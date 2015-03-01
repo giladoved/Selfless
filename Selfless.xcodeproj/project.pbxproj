@@ -47,6 +47,7 @@
 		810492C41AA30D8C0009EF39 /* user58.png in Resources */ = {isa = PBXBuildFile; fileRef = 810492BA1AA30D8C0009EF39 /* user58.png */; };
 		810492CA1AA32D940009EF39 /* IGRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 810492C71AA32D940009EF39 /* IGRequest.m */; };
 		810492CB1AA32D940009EF39 /* Instagram.m in Sources */ = {isa = PBXBuildFile; fileRef = 810492C91AA32D940009EF39 /* Instagram.m */; };
+		810492CF1AA33B5A0009EF39 /* InstaAuthViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 810492CE1AA33B5A0009EF39 /* InstaAuthViewController.m */; };
 		810DC3F71AA2AB77006230FC /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 810DC3F61AA2AB77006230FC /* LoginViewController.m */; };
 		810DC3FA1AA2AB8E006230FC /* SignUpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 810DC3F91AA2AB8E006230FC /* SignUpViewController.m */; };
 		810DC3FD1AA2AB9B006230FC /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 810DC3FC1AA2AB9B006230FC /* MainViewController.m */; };
@@ -125,6 +126,8 @@
 		810492C71AA32D940009EF39 /* IGRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = IGRequest.m; path = Selfless/IGRequest.m; sourceTree = "<group>"; };
 		810492C81AA32D940009EF39 /* Instagram.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Instagram.h; path = Selfless/Instagram.h; sourceTree = "<group>"; };
 		810492C91AA32D940009EF39 /* Instagram.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Instagram.m; path = Selfless/Instagram.m; sourceTree = "<group>"; };
+		810492CD1AA33B5A0009EF39 /* InstaAuthViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InstaAuthViewController.h; sourceTree = "<group>"; };
+		810492CE1AA33B5A0009EF39 /* InstaAuthViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InstaAuthViewController.m; sourceTree = "<group>"; };
 		810DC3F51AA2AB77006230FC /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
 		810DC3F61AA2AB77006230FC /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
 		810DC3F81AA2AB8E006230FC /* SignUpViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SignUpViewController.h; sourceTree = "<group>"; };
@@ -200,6 +203,8 @@
 				810DC3FE1AA2AC49006230FC /* RNFrostedSidebar.h */,
 				810DC3FF1AA2AC49006230FC /* RNFrostedSidebar.m */,
 				1BC2DF801AA2A6F1003CC510 /* Main.storyboard */,
+				810492CD1AA33B5A0009EF39 /* InstaAuthViewController.h */,
+				810492CE1AA33B5A0009EF39 /* InstaAuthViewController.m */,
 				1BC2DF831AA2A6F1003CC510 /* Images.xcassets */,
 				1BC2DF851AA2A6F1003CC510 /* LaunchScreen.xib */,
 				1BC2DF761AA2A6F1003CC510 /* Supporting Files */,
@@ -383,6 +388,7 @@
 					};
 					1BC2DF8B1AA2A6F1003CC510 = {
 						CreatedOnToolsVersion = 6.1.1;
+						DevelopmentTeam = L2JS3CUT43;
 						TestTargetID = 1BC2DF721AA2A6F1003CC510;
 					};
 				};
@@ -492,6 +498,7 @@
 				8104929D1AA2EC240009EF39 /* CharityViewController.m in Sources */,
 				1BC2DF7C1AA2A6F1003CC510 /* AppDelegate.m in Sources */,
 				1BC2DF791AA2A6F1003CC510 /* main.m in Sources */,
+				810492CF1AA33B5A0009EF39 /* InstaAuthViewController.m in Sources */,
 				810492981AA2EC0A0009EF39 /* ProfileViewController.m in Sources */,
 				810492CB1AA32D940009EF39 /* Instagram.m in Sources */,
 				8104928E1AA2E9140009EF39 /* FeedViewController.m in Sources */,
@@ -582,6 +589,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
+				PROVISIONING_PROFILE = "";
 				SDKROOT = iphoneos;
 			};
 			name = Debug;
@@ -617,6 +625,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				MTL_ENABLE_DEBUG_INFO = NO;
+				PROVISIONING_PROFILE = "";
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
 			};
@@ -656,6 +665,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
@@ -667,6 +678,7 @@
 				INFOPLIST_FILE = SelflessTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Selfless.app/Selfless";
 			};
 			name = Debug;
@@ -675,6 +687,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
@@ -682,6 +696,7 @@
 				INFOPLIST_FILE = SelflessTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Selfless.app/Selfless";
 			};
 			name = Release;

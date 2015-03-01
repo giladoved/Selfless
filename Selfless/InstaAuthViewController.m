@@ -16,7 +16,7 @@
 #define INSTAGRAM_REDIRECT_URI                          @"http://localhost"
 #define INSTAGRAM_ACCESS_TOKEN                          @"access_token"
 #define INSTAGRAM_SCOPE                                 @"likes+comments+relationships"
-#define typeOfAuthentication                            @"UNSIGNED"
+#define typeOfAuthentication                            @"SIGNED"
 
 @interface InstaAuthViewController ()
 
@@ -138,19 +138,87 @@
     NSError *requestError = NULL;
     NSData *responseData = [NSURLConnection sendSynchronousRequest:requestData returningResponse:&response error:&requestError];
     NSDictionary *dict = [NSJSONSerialization JSONObjectWithData:responseData options:NSJSONReadingAllowFragments error:nil];
-    [self handleAuth:[dict valueForKey:@"access_token"]];
+    //NSLog(@"PRINTING DICTIONARY %@",dict);
+    [self handleAuth:dict];
     
 }
 
 -(void) goToMain {
-    MainViewController *mainVC = [[MainViewController alloc] initWithNibName:nil bundle:nil];
-    [self.navigationController pushViewController:mainVC animated:YES];
+    //NSString *strMethod=[NSString stringWithFormat:@"users/self/feed?access_token=%@",_tokenCopy];
+    //AppDelegate* appDelegate = (AppDelegate*)[UIApplication sharedApplication].delegate;
+    //[appDelegate.instagram requestWithMethodName:strMethod params:nil httpMethod:@"GET" delegate:self];
+    [self performSegueWithIdentifier:@"registerToMain" sender:nil];
+
 }
 
-- (void) handleAuth: (NSString*) authToken
+- (void) handleAuth: (NSDictionary*) dict
 {
-    NSLog(@"successfully logged in with Tocken == %@",authToken);
+    NSLog(@"successfully logged in with Tocken == %@",dict[@"access_token"]);
     [self.webview stopLoading];
+    //Register on the server
+    NSString *pushId = [[NSUserDefaults standardUserDefaults] objectForKey:@"pushToken"];
+    NSURL *URL = [NSURL URLWithString:@"http://private-anon-d3281e586-selfless.apiary-mock.com/user"];
+    
+    NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:URL];
+    [request setHTTPMethod:@"POST"];
+    
+    [request setValue:@"application/json" forHTTPHeaderField:@"Content-Type"];
+    [request setHTTPBody:[@{
+                          @"insta_id": dict[@"user"][@"id"],
+                          @"insta_name": dict[@"user"][@"name"],
+                          @"os_type": @"iOS",
+                          @"push_id": pushId,
+                          @"auth_token": dict[@"access_token"]
+                          } dataUsingEncoding:NSUTF8StringEncoding]];
+                          
+                          NSURLSession *session = [NSURLSession sharedSession];
+                          NSURLSessionDataTask *task = [session dataTaskWithRequest:request
+                                                                  completionHandler:
+                                                        ^(NSData *data, NSURLResponse *response, NSError *error) {
+                                                            
+                                                            if (error) {
+                                                                // Handle error...
+                                                                return;
+                                                            }
+                                                            
+                                                            if ([response isKindOfClass:[NSHTTPURLResponse class]]) {
+                                                                NSLog(@"Response HTTP Status code: %ld\n", (long)[(NSHTTPURLResponse *)response statusCode]);
+                                                                NSLog(@"Response HTTP Headers:\n%@\n", [(NSHTTPURLResponse *)response allHeaderFields]);
+                                                            }
+                                                            
+                                                            NSString* body = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
+                                                            NSLog(@"Response Body:\n%@\n", body);
+                                                        }];
+                          [task resume];
     [self goToMain];
 }
+
+#pragma mark - IGRequestDelegate
+
+- (void)request:(IGRequest *)request didFailWithError:(NSError *)error {
+    NSLog(@"Instagram did fail: %@", error);
+    UIAlertView* alertView = [[UIAlertView alloc] initWithTitle:@"Error"
+                                                        message:[error localizedDescription]
+                                                       delegate:nil
+                                              cancelButtonTitle:@"Ok"
+                                              otherButtonTitles:nil];
+    [alertView show];
+}
+
+- (void)request:(IGRequest *)request didLoad:(id)result {
+    //NSLog(@"Instagram did load: %@", result);
+    _result = result;
+    //self.data = (NSArray*)[result objectForKey:@"data"];
+    //[self.tableView reloadData];
+    MainViewController *mainVC = [[MainViewController alloc] initWithNibName:nil bundle:nil];
+    //[self.navigationController pushViewController:mainVC animated:YES];
+    
+    [self performSegueWithIdentifier:@"registerToMain" sender:nil];
+}
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
+    MainViewController* vc = (MainViewController*)segue.destinationViewController;
+    vc.instagramResult = _result;
+}
+
 @end

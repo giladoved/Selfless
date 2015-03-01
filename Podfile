@@ -5,6 +5,7 @@ target 'Selfless' do
 	platform :ios, '8.0'
     pod 'CardIO'
     pod 'iOS-blur'
+    pod 'BEMSimpleLineGraph'
 end
 
 target 'SelflessTests' do

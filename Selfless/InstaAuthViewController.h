@@ -7,7 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "Instagram.h"
+#import "AppDelegate.h"
 
-@interface InstaAuthViewController : UIViewController <UIWebViewDelegate>
+@interface InstaAuthViewController : UIViewController <UIWebViewDelegate, IGRequestDelegate>
 @property (weak, nonatomic) IBOutlet UIWebView *webview;
+@property (strong, nonatomic) NSString* tokenCopy;
+@property (strong, nonatomic) id result;
 @end

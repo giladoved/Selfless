@@ -99,11 +99,9 @@
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eZl-rl-Djb">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-
                                 <color key="backgroundColor" red="0.054901960780000002" green="0.63529411759999999" blue="0.61176470589999998" alpha="1" colorSpace="calibratedRGB"/>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ohK-X5-mt2">
-
                                 <rect key="frame" x="16" y="20" width="46" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="DjP-gg-lQJ"/>
@@ -122,10 +120,8 @@
                         <constraints>
                             <constraint firstItem="eZl-rl-Djb" firstAttribute="top" secondItem="9Fb-Ri-WHX" secondAttribute="top" id="MNN-ee-gyf"/>
                             <constraint firstItem="eZl-rl-Djb" firstAttribute="leading" secondItem="9Fb-Ri-WHX" secondAttribute="leading" id="Z0c-Kj-gXe"/>
-
                             <constraint firstItem="ohK-X5-mt2" firstAttribute="top" secondItem="lch-fZ-PXd" secondAttribute="bottom" id="cO9-2h-bFn"/>
                             <constraint firstItem="ohK-X5-mt2" firstAttribute="leading" secondItem="9Fb-Ri-WHX" secondAttribute="leadingMargin" id="iNL-4q-8M8"/>
-
                             <constraint firstAttribute="trailing" secondItem="eZl-rl-Djb" secondAttribute="trailing" id="lGp-yW-wBq"/>
                             <constraint firstItem="Ea2-Zn-iJe" firstAttribute="top" secondItem="eZl-rl-Djb" secondAttribute="bottom" id="wVO-cI-60P"/>
                         </constraints>
@@ -214,7 +210,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="QQr-SM-9vd" kind="show" identifier="signUpToMain" id="gt4-W4-pIx"/>
+                                    <segue destination="hDw-Pd-ooc" kind="show" id="HUn-tx-LUI"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Card # :" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" minimumFontSize="9" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2ey-qR-OeS">
@@ -279,7 +275,35 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5jG-2f-oaI" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="245" y="1045"/>
+            <point key="canvasLocation" x="280" y="1041"/>
+        </scene>
+        <!--Insta Auth View Controller-->
+        <scene sceneID="otS-Ej-iji">
+            <objects>
+                <viewController id="hDw-Pd-ooc" customClass="InstaAuthViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="8Gf-7k-IbO"/>
+                        <viewControllerLayoutGuide type="bottom" id="oy2-d6-Cga"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="hji-n6-g4t">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <webView autoresizesSubviews="NO" multipleTouchEnabled="YES" contentMode="center" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="b3d-Jj-fBg">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </webView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <connections>
+                        <outlet property="webview" destination="b3d-Jj-fBg" id="mqA-NC-m0F"/>
+                        <segue destination="QQr-SM-9vd" kind="show" identifier="registerToMain" id="cwx-Xd-VeI"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="DsV-ZZ-VP3" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="245" y="1800"/>
         </scene>
     </scenes>
     <resources>
@@ -287,6 +311,6 @@
         <image name="main_background_blur.jpg" width="2657" height="4000"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="gt4-W4-pIx"/>
+        <segue reference="cwx-Xd-VeI"/>
     </inferredMetricsTieBreakers>
 </document>
