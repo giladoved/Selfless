@@ -180,6 +180,31 @@
     [[NSUserDefaults standardUserDefaults] synchronize];
     
     [self.webview stopLoading];
+
+    NSString *pushId = [[NSUserDefaults standardUserDefaults] objectForKey:@"pushToken"];
+    NSLog(@"user: %@", dict[@"user"]);
+    NSLog(@"user: %@", dict[@"access_token"]);
+    NSLog(@"user: %@", dict[@"user"][@"id"]);
+    NSLog(@"user: %@", dict[@"user"][@"name"]);
+    
+    [[NSUserDefaults standardUserDefaults] setObject:dict[@"user"] forKey:@"userInfo"];
+    [[NSUserDefaults standardUserDefaults] synchronize];
+
+    //Register on the server
+    AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
+    NSDictionary *params = @{
+                             @"insta_id": dict[@"user"][@"id"],
+                             @"insta_name": dict[@"user"][@"username"],
+                             @"os_type": @"iOS",
+                             @"push_id": pushId,
+                             @"auth_token": dict[@"access_token"]
+                             };
+    [manager POST:@"http://54.67.44.197:3000/v1/user" parameters:params success:^(AFHTTPRequestOperation *operation, id responseObject) {
+        NSLog(@"JSON: %@", responseObject);
+    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+        NSLog(@"Error: %@", error);
+    }];
+    
     [self goToMain];
 }
 

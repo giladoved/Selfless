@@ -16,9 +16,10 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view from its nib.
-
-    }
+    NSDictionary *userInfo = [[NSUserDefaults standardUserDefaults] dictionaryForKey:@"userInfo"];
+    NSString *username = [NSString stringWithFormat:@"@%@", userInfo[@"username"]];
+    NSLog(@"username: %@", username);
+}
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

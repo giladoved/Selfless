@@ -17,13 +17,33 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
-
+    NSDictionary *userInfo = [[NSUserDefaults standardUserDefaults] dictionaryForKey:@"userInfo"];
+    NSLog(@"amdin token: %@", userInfo);
+    NSString *bio = userInfo[@"bio"];
+    NSString *fullname = userInfo[@"full_name"];
+    long *userID = (long)userInfo[@"id"];
+    NSString *profilePictureURL = userInfo[@"profile_picture"];
+    NSURL *imageUrl = [NSURL URLWithString:profilePictureURL];
+    NSData *imageData = [NSData dataWithContentsOfURL:imageUrl];
+    UIImage *profilePicture = [[UIImage alloc] initWithData:imageData];
+    NSString *username = userInfo[@"username"];
+    NSString *website = userInfo[@"website"];
     
+    _nameLabel.text = fullname;
+    _usernameLabel.text = [NSString stringWithFormat:@"@%@",username];
+    _bioView.text = [NSString stringWithFormat:@"Bio: %@",bio];
+    _imageView.image = profilePicture;
+    _imageView.layer.borderWidth = 1.0f;
+    _imageView.layer.borderColor = [UIColor whiteColor].CGColor;
+    _imageView.layer.cornerRadius = 50;
+    _imageView.layer.masksToBounds = NO;
+    _imageView.clipsToBounds = YES;
 
     
 }
 
 - (void)viewDidAppear:(BOOL)animated{
+
 }
 
 - (void)didReceiveMemoryWarning {

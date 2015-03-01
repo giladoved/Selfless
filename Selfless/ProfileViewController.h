@@ -10,5 +10,10 @@
 
 @interface ProfileViewController : UIViewController
 @property int temp;
+@property (weak, nonatomic) IBOutlet UIImageView *imageView;
+@property (weak, nonatomic) IBOutlet UILabel *nameLabel;
+@property (weak, nonatomic) IBOutlet UILabel *usernameLabel;
+@property (weak, nonatomic) IBOutlet UITextView *bioView;
+@property (weak, nonatomic) IBOutlet UIWebView *webView;
 
 @end
