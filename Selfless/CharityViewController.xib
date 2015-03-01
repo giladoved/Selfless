@@ -14,18 +14,43 @@
             <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Charity" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xl3-xb-eDb">
-                    <rect key="frame" x="260" y="289" width="80" height="21"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                    <nil key="highlightedColor"/>
-                </label>
+                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="joL-e6-FaW">
+                    <rect key="frame" x="312" y="8" width="280" height="584"/>
+                    <string key="text">WWP's vision is to "foster the most successful, well-adjusted generation of wounded service members in our nation's history" as it works to raise awareness and enlist the public's aid for the needs of severely injured servicemembers, help severely injured service members aid and assist each other and provide unique, direct programs and services to meet their needs.</string>
+                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <fontDescription key="fontDescription" name="Avenir-Light" family="Avenir" pointSize="15"/>
+                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                </textView>
+                <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="wwp.png" translatesAutoresizingMaskIntoConstraints="NO" id="wlv-Ll-faM">
+                    <rect key="frame" x="8" y="8" width="280" height="280"/>
+                </imageView>
+                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Wounded Warrior Project" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="CId-uB-30W">
+                    <rect key="frame" x="8" y="312" width="280" height="280"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="28"/>
+                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                </textView>
             </subviews>
             <color key="backgroundColor" red="0.054901960780000002" green="0.63529411759999999" blue="0.61176470589999998" alpha="1" colorSpace="calibratedRGB"/>
             <constraints>
-                <constraint firstAttribute="centerY" secondItem="Xl3-xb-eDb" secondAttribute="centerY" id="1bo-Z7-eeZ"/>
-                <constraint firstAttribute="centerX" secondItem="Xl3-xb-eDb" secondAttribute="centerX" id="BGy-MW-ohJ"/>
+                <constraint firstItem="wlv-Ll-faM" firstAttribute="height" secondItem="CId-uB-30W" secondAttribute="height" id="0Ov-yV-JSe"/>
+                <constraint firstItem="CId-uB-30W" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="8" id="5uh-rG-Nul"/>
+                <constraint firstItem="wlv-Ll-faM" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="8" id="7Kd-lx-SCb"/>
+                <constraint firstItem="CId-uB-30W" firstAttribute="top" secondItem="wlv-Ll-faM" secondAttribute="bottom" constant="24" id="DYn-jG-1hk"/>
+                <constraint firstAttribute="trailing" secondItem="joL-e6-FaW" secondAttribute="trailing" constant="8" id="IJs-8G-aCb"/>
+                <constraint firstItem="CId-uB-30W" firstAttribute="top" secondItem="wlv-Ll-faM" secondAttribute="bottom" constant="24" id="PTB-OY-kfC"/>
+                <constraint firstItem="joL-e6-FaW" firstAttribute="leading" secondItem="CId-uB-30W" secondAttribute="trailing" constant="24" id="PwO-4H-l4U"/>
+                <constraint firstItem="joL-e6-FaW" firstAttribute="leading" secondItem="wlv-Ll-faM" secondAttribute="trailing" constant="24" id="RIV-gx-ZXL"/>
+                <constraint firstAttribute="bottom" secondItem="CId-uB-30W" secondAttribute="bottom" constant="8" id="S5P-9d-jmG"/>
+                <constraint firstItem="joL-e6-FaW" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="8" id="U6B-3K-S96"/>
+                <constraint firstAttribute="bottom" secondItem="joL-e6-FaW" secondAttribute="bottom" constant="8" id="ZBy-XF-9LJ"/>
+                <constraint firstItem="wlv-Ll-faM" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="8" id="cKo-F5-scq"/>
+                <constraint firstItem="CId-uB-30W" firstAttribute="width" secondItem="wlv-Ll-faM" secondAttribute="width" id="dvh-Mb-IEM"/>
+                <constraint firstItem="CId-uB-30W" firstAttribute="width" secondItem="joL-e6-FaW" secondAttribute="width" id="zC9-9W-Rno"/>
             </constraints>
         </view>
     </objects>
+    <resources>
+        <image name="wwp.png" width="145" height="129"/>
+    </resources>
 </document>

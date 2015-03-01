@@ -65,6 +65,7 @@
 		810493221AA375D60009EF39 /* Icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8104930E1AA375D60009EF39 /* Icon@2x.png */; };
 		810493231AA375D60009EF39 /* iTunesArtwork in Resources */ = {isa = PBXBuildFile; fileRef = 8104930F1AA375D60009EF39 /* iTunesArtwork */; };
 		810493241AA375D60009EF39 /* iTunesArtwork@2x in Resources */ = {isa = PBXBuildFile; fileRef = 810493101AA375D60009EF39 /* iTunesArtwork@2x */; };
+		810493261AA3838F0009EF39 /* wwp.png in Resources */ = {isa = PBXBuildFile; fileRef = 810493251AA3838F0009EF39 /* wwp.png */; };
 		810DC3F71AA2AB77006230FC /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 810DC3F61AA2AB77006230FC /* LoginViewController.m */; };
 		810DC3FA1AA2AB8E006230FC /* SignUpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 810DC3F91AA2AB8E006230FC /* SignUpViewController.m */; };
 		810DC3FD1AA2AB9B006230FC /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 810DC3FC1AA2AB9B006230FC /* MainViewController.m */; };
@@ -162,6 +163,7 @@
 		8104930E1AA375D60009EF39 /* Icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon@2x.png"; sourceTree = "<group>"; };
 		8104930F1AA375D60009EF39 /* iTunesArtwork */ = {isa = PBXFileReference; lastKnownFileType = file; path = iTunesArtwork; sourceTree = "<group>"; };
 		810493101AA375D60009EF39 /* iTunesArtwork@2x */ = {isa = PBXFileReference; lastKnownFileType = file; path = "iTunesArtwork@2x"; sourceTree = "<group>"; };
+		810493251AA3838F0009EF39 /* wwp.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = wwp.png; sourceTree = "<group>"; };
 		810DC3F51AA2AB77006230FC /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
 		810DC3F61AA2AB77006230FC /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
 		810DC3F81AA2AB8E006230FC /* SignUpViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SignUpViewController.h; sourceTree = "<group>"; };
@@ -303,6 +305,7 @@
 				8104929A1AA2EC240009EF39 /* CharityViewController.h */,
 				8104929B1AA2EC240009EF39 /* CharityViewController.m */,
 				8104929C1AA2EC240009EF39 /* CharityViewController.xib */,
+				810493251AA3838F0009EF39 /* wwp.png */,
 				8104929F1AA2EC360009EF39 /* ActivityViewController.h */,
 				810492A01AA2EC360009EF39 /* ActivityViewController.m */,
 				810492A11AA2EC360009EF39 /* ActivityViewController.xib */,
@@ -522,6 +525,7 @@
 				810493151AA375D60009EF39 /* Icon-60@2x.png in Resources */,
 				1BC2DF841AA2A6F1003CC510 /* Images.xcassets in Resources */,
 				8104931F1AA375D60009EF39 /* Icon-Small-50.png in Resources */,
+				810493261AA3838F0009EF39 /* wwp.png in Resources */,
 				810492811AA2E00D0009EF39 /* logout.png in Resources */,
 				810493131AA375D60009EF39 /* Icon-40@2x.png in Resources */,
 				8104931D1AA375D60009EF39 /* Icon-72.png in Resources */,

@@ -64,8 +64,9 @@
 
 - (NSAttributedString *)pickerView:(UIPickerView *)pickerView attributedTitleForRow:(NSInteger)row forComponent:(NSInteger)component
 {
-    NSString *title = @"Preferred Charity";
-    NSAttributedString *attString = [[NSAttributedString alloc] initWithString:title attributes:@{NSForegroundColorAttributeName:[UIColor whiteColor]}];
+ 
+    NSAttributedString *attString = [[NSAttributedString alloc] initWithString:listOfCharities[row] attributes:@{NSForegroundColorAttributeName:[UIColor whiteColor]}];
+    
     
     return attString;
     
