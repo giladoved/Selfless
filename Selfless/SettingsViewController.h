@@ -10,5 +10,4 @@
 
 @interface SettingsViewController : UIViewController
 @property (weak, nonatomic) IBOutlet UIImageView *logoView;
-
 @end
