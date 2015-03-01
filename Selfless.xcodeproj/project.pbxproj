@@ -25,6 +25,7 @@
 		810DC40F1AA2AF1F006230FC /* gear.png in Resources */ = {isa = PBXBuildFile; fileRef = 810DC40C1AA2AF1F006230FC /* gear.png */; };
 		810DC4101AA2AF1F006230FC /* profile.png in Resources */ = {isa = PBXBuildFile; fileRef = 810DC40D1AA2AF1F006230FC /* profile.png */; };
 		810DC4111AA2AF1F006230FC /* star.png in Resources */ = {isa = PBXBuildFile; fileRef = 810DC40E1AA2AF1F006230FC /* star.png */; };
+		810DC4131AA2BC8A006230FC /* 5703437673_b99ea29830_o.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 810DC4121AA2BC8A006230FC /* 5703437673_b99ea29830_o.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,6 +66,7 @@
 		810DC40C1AA2AF1F006230FC /* gear.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = gear.png; sourceTree = "<group>"; };
 		810DC40D1AA2AF1F006230FC /* profile.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = profile.png; sourceTree = "<group>"; };
 		810DC40E1AA2AF1F006230FC /* star.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = star.png; sourceTree = "<group>"; };
+		810DC4121AA2BC8A006230FC /* 5703437673_b99ea29830_o.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 5703437673_b99ea29830_o.jpg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -123,6 +125,7 @@
 				810DC3F91AA2AB8E006230FC /* SignUpViewController.m */,
 				810DC3FB1AA2AB9B006230FC /* MainViewController.h */,
 				810DC3FC1AA2AB9B006230FC /* MainViewController.m */,
+				810DC4121AA2BC8A006230FC /* 5703437673_b99ea29830_o.jpg */,
 				810DC3FE1AA2AC49006230FC /* RNFrostedSidebar.h */,
 				810DC3FF1AA2AC49006230FC /* RNFrostedSidebar.m */,
 				1BC2DF801AA2A6F1003CC510 /* Main.storyboard */,
@@ -254,6 +257,7 @@
 			files = (
 				1BC2DF821AA2A6F1003CC510 /* Main.storyboard in Resources */,
 				1BC2DF871AA2A6F1003CC510 /* LaunchScreen.xib in Resources */,
+				810DC4131AA2BC8A006230FC /* 5703437673_b99ea29830_o.jpg in Resources */,
 				810DC40F1AA2AF1F006230FC /* gear.png in Resources */,
 				810DC4101AA2AF1F006230FC /* profile.png in Resources */,
 				1BC2DF841AA2A6F1003CC510 /* Images.xcassets in Resources */,
