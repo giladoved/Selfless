@@ -16,22 +16,33 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-
+    
     [[UIApplication sharedApplication] registerUserNotificationSettings:[UIUserNotificationSettings settingsForTypes:(UIUserNotificationTypeSound | UIUserNotificationTypeAlert | UIUserNotificationTypeBadge) categories:nil]];
     [[UIApplication sharedApplication] registerForRemoteNotifications];
     
     return YES;
 }
 
-- (void)application:(UIApplication*)application didReceiveRemoteNotification:(NSDictionary*)userInfo
-{
-    NSLog(@"push!!: %@", userInfo);
+- (void)application:(UIApplication *)app didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)deviceToken {
+    NSString *device = [deviceToken description];
+    device = [device stringByTrimmingCharactersInSet:[NSCharacterSet characterSetWithCharactersInString:@"<>"]];
+    device = [device stringByReplacingOccurrencesOfString:@" " withString:@""];
+    
+    NSLog(@"My device is: %@", device);
+    
+    NSString* pushToken = [[[[deviceToken description]
+                             stringByReplacingOccurrencesOfString: @"<" withString: @""]
+                            stringByReplacingOccurrencesOfString: @">" withString: @""]
+                           stringByReplacingOccurrencesOfString: @" " withString: @""];
+    NSLog(@"push id %@",pushToken);
+    [[NSUserDefaults standardUserDefaults] setObject:pushToken forKey:@"pushToken"];
+    [[NSUserDefaults standardUserDefaults] synchronize];
 }
 
 - (void)application:(UIApplication *)app didFailToRegisterForRemoteNotificationsWithError:(NSError *)err {
     
     NSString *str = [NSString stringWithFormat: @"Error: %@", err];
-    NSLog(@"Error %@",err);
+    NSLog(@"Error %@",str);
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application {
