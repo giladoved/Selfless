@@ -185,6 +185,9 @@
     NSLog(@"user: %@", dict[@"access_token"]);
     NSLog(@"user: %@", dict[@"user"][@"id"]);
     NSLog(@"user: %@", dict[@"user"][@"name"]);
+    
+    [[NSUserDefaults standardUserDefaults] setObject:dict[@"user"] forKey:@"userInfo"];
+    [[NSUserDefaults standardUserDefaults] synchronize];
 
     //Register on the server
     AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
