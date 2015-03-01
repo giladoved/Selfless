@@ -7,6 +7,7 @@
 //
 
 #import "LoginViewController.h"
+#import "InstaLoginViewController.h"
 #import "SignUpViewController.h"
 
 @interface LoginViewController ()
@@ -17,13 +18,13 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
 
 /*
 #pragma mark - Navigation
@@ -36,11 +37,14 @@
 */
 
 - (IBAction)singInButtonPressed:(id)sender {
+    //InstaLoginViewController *instaVC = [[InstaLoginViewController alloc] initWithNibName:nil bundle:nil];
+    //[self presentViewController:instaVC animated:YES completion:nil];
     [self performSegueWithIdentifier:@"loginToMain" sender:nil];
 }
 
+
+
 - (IBAction)signUpButtonPressed:(id)sender {
     [self performSegueWithIdentifier:@"loginToSignUp" sender:nil];
-    
 }
 @end

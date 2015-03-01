@@ -8,9 +8,12 @@
 
 #import "SignUpViewController.h"
 #import "CardIO.h"
+#import "AppDelegate.h"
+#import "MainViewController.h"
 
 @interface SignUpViewController () <CardIOPaymentViewControllerDelegate, UIPickerViewDataSource, UIPickerViewDelegate> {
     NSArray *listOfCharities;
+    BOOL donePressed;
 }
 
 @end
@@ -23,13 +26,23 @@
     
     self.pickerView.dataSource = self;
     self.pickerView.delegate = self;
+    
+    if (donePressed) {
+        AppDelegate* appDelegate = (AppDelegate*)[UIApplication sharedApplication].delegate;
+        
+        // here i can set accessToken received on previous login
+        appDelegate.instagram.accessToken = [[NSUserDefaults standardUserDefaults] objectForKey:@"accessToken"];
+        appDelegate.instagram.sessionDelegate = self;
+        if ([appDelegate.instagram isSessionValid]) {
+            UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+            MainViewController *vc = (MainViewController *)[storyboard instantiateViewControllerWithIdentifier:@"MainViewController"];
+            [self presentViewController:vc animated:YES completion:nil];
+        } else {
+            [appDelegate.instagram authorize:[NSArray arrayWithObjects:@"comments", @"likes", nil]];
+        }
+    }
     [_blurView setImage:[UIImage imageNamed:@"main_background_blur.jpg"]];
 
-}
-
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
 
 - (void)viewWillAppear:(BOOL)animated {
@@ -84,19 +97,6 @@
     // This method is triggered whenever the user makes a change to the picker selection.
     // The parameter named row and component represents what was selected.
 }
-
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
-
-
 
 
 @end

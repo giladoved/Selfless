@@ -45,6 +45,8 @@
 		810492C21AA30D8C0009EF39 /* star83.png in Resources */ = {isa = PBXBuildFile; fileRef = 810492B81AA30D8C0009EF39 /* star83.png */; };
 		810492C31AA30D8C0009EF39 /* stats20.png in Resources */ = {isa = PBXBuildFile; fileRef = 810492B91AA30D8C0009EF39 /* stats20.png */; };
 		810492C41AA30D8C0009EF39 /* user58.png in Resources */ = {isa = PBXBuildFile; fileRef = 810492BA1AA30D8C0009EF39 /* user58.png */; };
+		810492CA1AA32D940009EF39 /* IGRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 810492C71AA32D940009EF39 /* IGRequest.m */; };
+		810492CB1AA32D940009EF39 /* Instagram.m in Sources */ = {isa = PBXBuildFile; fileRef = 810492C91AA32D940009EF39 /* Instagram.m */; };
 		810DC3F71AA2AB77006230FC /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 810DC3F61AA2AB77006230FC /* LoginViewController.m */; };
 		810DC3FA1AA2AB8E006230FC /* SignUpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 810DC3F91AA2AB8E006230FC /* SignUpViewController.m */; };
 		810DC3FD1AA2AB9B006230FC /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 810DC3FC1AA2AB9B006230FC /* MainViewController.m */; };
@@ -118,6 +120,11 @@
 		810492B81AA30D8C0009EF39 /* star83.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = star83.png; sourceTree = "<group>"; };
 		810492B91AA30D8C0009EF39 /* stats20.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = stats20.png; sourceTree = "<group>"; };
 		810492BA1AA30D8C0009EF39 /* user58.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = user58.png; sourceTree = "<group>"; };
+		810492C51AA32D940009EF39 /* IGConnect.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = IGConnect.h; path = Selfless/IGConnect.h; sourceTree = "<group>"; };
+		810492C61AA32D940009EF39 /* IGRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = IGRequest.h; path = Selfless/IGRequest.h; sourceTree = "<group>"; };
+		810492C71AA32D940009EF39 /* IGRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = IGRequest.m; path = Selfless/IGRequest.m; sourceTree = "<group>"; };
+		810492C81AA32D940009EF39 /* Instagram.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Instagram.h; path = Selfless/Instagram.h; sourceTree = "<group>"; };
+		810492C91AA32D940009EF39 /* Instagram.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Instagram.m; path = Selfless/Instagram.m; sourceTree = "<group>"; };
 		810DC3F51AA2AB77006230FC /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
 		810DC3F61AA2AB77006230FC /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
 		810DC3F81AA2AB8E006230FC /* SignUpViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SignUpViewController.h; sourceTree = "<group>"; };
@@ -286,9 +293,22 @@
 			path = png;
 			sourceTree = "<group>";
 		};
+		810492CC1AA32D9E0009EF39 /* Instagram */ = {
+			isa = PBXGroup;
+			children = (
+				810492C51AA32D940009EF39 /* IGConnect.h */,
+				810492C61AA32D940009EF39 /* IGRequest.h */,
+				810492C71AA32D940009EF39 /* IGRequest.m */,
+				810492C81AA32D940009EF39 /* Instagram.h */,
+				810492C91AA32D940009EF39 /* Instagram.m */,
+			);
+			name = Instagram;
+			sourceTree = "<group>";
+		};
 		810DC40B1AA2ACBE006230FC /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				810492CC1AA32D9E0009EF39 /* Instagram */,
 				810DC4091AA2AC89006230FC /* CoreGraphics.framework */,
 				810DC4071AA2AC7E006230FC /* UIKit.framework */,
 				810DC4051AA2AC79006230FC /* Foundation.framework */,
@@ -473,7 +493,9 @@
 				1BC2DF7C1AA2A6F1003CC510 /* AppDelegate.m in Sources */,
 				1BC2DF791AA2A6F1003CC510 /* main.m in Sources */,
 				810492981AA2EC0A0009EF39 /* ProfileViewController.m in Sources */,
+				810492CB1AA32D940009EF39 /* Instagram.m in Sources */,
 				8104928E1AA2E9140009EF39 /* FeedViewController.m in Sources */,
+				810492CA1AA32D940009EF39 /* IGRequest.m in Sources */,
 				810DC4001AA2AC49006230FC /* RNFrostedSidebar.m in Sources */,
 				810492AC1AA2EC770009EF39 /* AboutViewController.m in Sources */,
 				810DC3FA1AA2AB8E006230FC /* SignUpViewController.m in Sources */,
