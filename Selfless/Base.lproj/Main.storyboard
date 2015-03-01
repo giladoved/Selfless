@@ -293,17 +293,25 @@
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </webView>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="VXS-Hx-7jZ">
+                                <rect key="frame" x="282" y="281" width="37" height="37"/>
+                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="centerY" secondItem="VXS-Hx-7jZ" secondAttribute="centerY" id="FWb-HL-0aB"/>
+                            <constraint firstAttribute="centerX" secondItem="VXS-Hx-7jZ" secondAttribute="centerX" id="kfc-p1-jm0"/>
+                        </constraints>
                     </view>
                     <connections>
+                        <outlet property="loadIndicator" destination="VXS-Hx-7jZ" id="pVp-lg-y7B"/>
                         <outlet property="webview" destination="b3d-Jj-fBg" id="mqA-NC-m0F"/>
                         <segue destination="QQr-SM-9vd" kind="show" identifier="registerToMain" id="cwx-Xd-VeI"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DsV-ZZ-VP3" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="245" y="1800"/>
+            <point key="canvasLocation" x="280" y="1806"/>
         </scene>
     </scenes>
     <resources>

@@ -1,0 +1,7 @@
+GCC_PREPROCESSOR_DEFINITIONS = $(inherited) COCOAPODS=1
+HEADER_SEARCH_PATHS = "${PODS_ROOT}/Headers/Public" "${PODS_ROOT}/Headers/Public/BEMSimpleLineGraph" "${PODS_ROOT}/Headers/Public/CardIO" "${PODS_ROOT}/Headers/Public/iOS-blur"
+LIBRARY_SEARCH_PATHS = "$(PODS_ROOT)/CardIO/CardIO"
+OTHER_CFLAGS = $(inherited) -isystem "${PODS_ROOT}/Headers/Public" -isystem "${PODS_ROOT}/Headers/Public/BEMSimpleLineGraph" -isystem "${PODS_ROOT}/Headers/Public/CardIO" -isystem "${PODS_ROOT}/Headers/Public/iOS-blur"
+OTHER_LDFLAGS = -ObjC -l"CardIO" -l"Pods-Selfless-BEMSimpleLineGraph" -l"Pods-Selfless-CardIO" -l"Pods-Selfless-iOS-blur" -l"c++" -framework "AVFoundation" -framework "AudioToolbox" -framework "CoreMedia" -framework "CoreVideo" -framework "MobileCoreServices" -framework "OpenGLES" -framework "QuartzCore" -framework "Security" -framework "UIKit"
+OTHER_LIBTOOLFLAGS = $(OTHER_LDFLAGS)
+PODS_ROOT = ${SRCROOT}/Pods

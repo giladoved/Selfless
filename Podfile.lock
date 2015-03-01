@@ -1,0 +1,16 @@
+PODS:
+  - BEMSimpleLineGraph (3.3)
+  - CardIO (5.0.2)
+  - iOS-blur (0.0.5)
+
+DEPENDENCIES:
+  - BEMSimpleLineGraph
+  - CardIO
+  - iOS-blur
+
+SPEC CHECKSUMS:
+  BEMSimpleLineGraph: 0ec77f0a2d3e8e448118bbb26963b72f94f1d618
+  CardIO: d159b9e108ad70e0a23cf1bf12d3b66a395a597a
+  iOS-blur: 5ec57b4a72e57a4f8f5f47ff3f59e56c0690b761
+
+COCOAPODS: 0.35.0

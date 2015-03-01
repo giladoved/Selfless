@@ -13,5 +13,6 @@
 @interface InstaAuthViewController : UIViewController <UIWebViewDelegate, IGRequestDelegate>
 @property (weak, nonatomic) IBOutlet UIWebView *webview;
 @property (strong, nonatomic) NSString* tokenCopy;
+@property (weak, nonatomic) IBOutlet UIActivityIndicatorView *loadIndicator;
 @property (strong, nonatomic) id result;
 @end

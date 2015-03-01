@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workspace
+   version = "1.0">
+   <Group
+      location = "group:Selfless/images"
+      name = "images">
+      <FileRef
+         location = "group:door13.png">
+      </FileRef>
+      <FileRef
+         location = "group:faq8.png">
+      </FileRef>
+      <FileRef
+         location = "group:heart318.png">
+      </FileRef>
+      <FileRef
+         location = "group:insurance4.png">
+      </FileRef>
+      <FileRef
+         location = "group:logout13.png">
+      </FileRef>
+      <FileRef
+         location = "group:rss33.png">
+      </FileRef>
+      <FileRef
+         location = "group:settings21.png">
+      </FileRef>
+      <FileRef
+         location = "group:star83.png">
+      </FileRef>
+      <FileRef
+         location = "group:stats20.png">
+      </FileRef>
+      <FileRef
+         location = "group:user58.png">
+      </FileRef>
+   </Group>
+   <FileRef
+      location = "group:Selfless.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:Pods/Pods.xcodeproj">
+   </FileRef>
+</Workspace>
