@@ -5,6 +5,8 @@
 //  Created by Gilad Oved on 2/28/15.
 //  Copyright (c) 2015 selfles. All rights reserved.
 //
+#define APP_ID @"dd12116b383d40b8a3cda5f8170cc0e7"
+
 
 #import "AppDelegate.h"
 
@@ -16,6 +18,9 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+    
+    self.instagram = [[Instagram alloc] initWithClientId:APP_ID
+                                                delegate:nil];
     
     [[UIApplication sharedApplication] registerUserNotificationSettings:[UIUserNotificationSettings settingsForTypes:(UIUserNotificationTypeSound | UIUserNotificationTypeAlert | UIUserNotificationTypeBadge) categories:nil]];
     [[UIApplication sharedApplication] registerForRemoteNotifications];
@@ -43,6 +48,15 @@
     
     NSString *str = [NSString stringWithFormat: @"Error: %@", err];
     NSLog(@"Error %@",str);
+}
+
+// YOU NEED TO CAPTURE igAPPID:// schema
+-(BOOL)application:(UIApplication *)application handleOpenURL:(NSURL *)url {
+    return [self.instagram handleOpenURL:url];
+}
+
+-(BOOL)application:(UIApplication *)application openURL:(NSURL *)url sourceApplication:(NSString *)sourceApplication annotation:(id)annotation {
+    return [self.instagram handleOpenURL:url];
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application {

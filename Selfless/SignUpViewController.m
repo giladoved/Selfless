@@ -8,9 +8,11 @@
 
 #import "SignUpViewController.h"
 #import "CardIO.h"
+#import "AppDelegate.h"
 
 @interface SignUpViewController () <CardIOPaymentViewControllerDelegate, UIPickerViewDataSource, UIPickerViewDelegate> {
     NSArray *listOfCharities;
+    BOOL donePressed;
 }
 
 @end
@@ -23,11 +25,19 @@
     
     self.pickerView.dataSource = self;
     self.pickerView.delegate = self;
-}
-
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+    
+    if (donePressed) {
+        AppDelegate* appDelegate = (AppDelegate*)[UIApplication sharedApplication].delegate;
+        
+        // here i can set accessToken received on previous login
+        appDelegate.instagram.accessToken = [[NSUserDefaults standardUserDefaults] objectForKey:@"accessToken"];
+        appDelegate.instagram.sessionDelegate = self;
+        if ([appDelegate.instagram isSessionValid]) {
+            [self performSegueWithIdentifier:@"signUpToMain" sender:nil];
+        } else {
+            [appDelegate.instagram authorize:[NSArray arrayWithObjects:@"comments", @"likes", nil]];
+        }
+    }
 }
 
 - (void)viewWillAppear:(BOOL)animated {
@@ -83,15 +93,58 @@
     // The parameter named row and component represents what was selected.
 }
 
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+- (IBAction)registerUser:(id)sender {
+    donePressed = YES;
+    [self login];
 }
-*/
+
+
+-(void)login {
+    AppDelegate* appDelegate = (AppDelegate*)[UIApplication sharedApplication].delegate;
+    [appDelegate.instagram authorize:[NSArray arrayWithObjects:@"comments", @"likes", nil]];
+}
+
+#pragma - IGSessionDelegate
+
+-(void)igDidLogin {
+    NSLog(@"Instagram did login");
+    // here i can store accessToken
+    AppDelegate* appDelegate = (AppDelegate*)[UIApplication sharedApplication].delegate;
+    [[NSUserDefaults standardUserDefaults] setObject:appDelegate.instagram.accessToken forKey:@"accessToken"];
+    [[NSUserDefaults standardUserDefaults] synchronize];
+    
+    [self performSegueWithIdentifier:@"signUpToMain" sender:nil];
+}
+
+-(void)igDidNotLogin:(BOOL)cancelled {
+    NSLog(@"Instagram did not login");
+    NSString* message = nil;
+    if (cancelled) {
+        message = @"Access cancelled!";
+    } else {
+        message = @"Access denied!";
+    }
+    UIAlertView* alertView = [[UIAlertView alloc] initWithTitle:@"Error"
+                                                        message:message
+                                                       delegate:nil
+                                              cancelButtonTitle:@"Ok"
+                                              otherButtonTitles:nil];
+    [alertView show];
+}
+
+-(void)igDidLogout {
+    NSLog(@"Instagram did logout");
+    // remove the accessToken
+    [[NSUserDefaults standardUserDefaults] setObject:nil forKey:@"accessToken"];
+    [[NSUserDefaults standardUserDefaults] synchronize];
+}
+
+-(void)igSessionInvalidated {
+    NSLog(@"Instagram session was invalidated");
+}
+
+
+
+
 
 @end
