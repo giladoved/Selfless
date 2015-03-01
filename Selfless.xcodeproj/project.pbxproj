@@ -16,6 +16,12 @@
 		810DC3F71AA2AB77006230FC /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 810DC3F61AA2AB77006230FC /* LoginViewController.m */; };
 		810DC3FA1AA2AB8E006230FC /* SignUpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 810DC3F91AA2AB8E006230FC /* SignUpViewController.m */; };
 		810DC3FD1AA2AB9B006230FC /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 810DC3FC1AA2AB9B006230FC /* MainViewController.m */; };
+		810DC4001AA2AC49006230FC /* RNFrostedSidebar.m in Sources */ = {isa = PBXBuildFile; fileRef = 810DC3FF1AA2AC49006230FC /* RNFrostedSidebar.m */; };
+		810DC4021AA2AC71006230FC /* Accelerate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 810DC4011AA2AC71006230FC /* Accelerate.framework */; };
+		810DC4041AA2AC75006230FC /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 810DC4031AA2AC75006230FC /* QuartzCore.framework */; };
+		810DC4061AA2AC79006230FC /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 810DC4051AA2AC79006230FC /* Foundation.framework */; };
+		810DC4081AA2AC7E006230FC /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 810DC4071AA2AC7E006230FC /* UIKit.framework */; };
+		810DC40A1AA2AC89006230FC /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 810DC4091AA2AC89006230FC /* CoreGraphics.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,6 +52,13 @@
 		810DC3F91AA2AB8E006230FC /* SignUpViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SignUpViewController.m; sourceTree = "<group>"; };
 		810DC3FB1AA2AB9B006230FC /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
 		810DC3FC1AA2AB9B006230FC /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
+		810DC3FE1AA2AC49006230FC /* RNFrostedSidebar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RNFrostedSidebar.h; sourceTree = "<group>"; };
+		810DC3FF1AA2AC49006230FC /* RNFrostedSidebar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RNFrostedSidebar.m; sourceTree = "<group>"; };
+		810DC4011AA2AC71006230FC /* Accelerate.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accelerate.framework; path = System/Library/Frameworks/Accelerate.framework; sourceTree = SDKROOT; };
+		810DC4031AA2AC75006230FC /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		810DC4051AA2AC79006230FC /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		810DC4071AA2AC7E006230FC /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		810DC4091AA2AC89006230FC /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,6 +66,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				810DC40A1AA2AC89006230FC /* CoreGraphics.framework in Frameworks */,
+				810DC4081AA2AC7E006230FC /* UIKit.framework in Frameworks */,
+				810DC4061AA2AC79006230FC /* Foundation.framework in Frameworks */,
+				810DC4041AA2AC75006230FC /* QuartzCore.framework in Frameworks */,
+				810DC4021AA2AC71006230FC /* Accelerate.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -69,6 +87,11 @@
 		1BC2DF6A1AA2A6F1003CC510 = {
 			isa = PBXGroup;
 			children = (
+				810DC4091AA2AC89006230FC /* CoreGraphics.framework */,
+				810DC4071AA2AC7E006230FC /* UIKit.framework */,
+				810DC4051AA2AC79006230FC /* Foundation.framework */,
+				810DC4031AA2AC75006230FC /* QuartzCore.framework */,
+				810DC4011AA2AC71006230FC /* Accelerate.framework */,
 				1BC2DF751AA2A6F1003CC510 /* Selfless */,
 				1BC2DF8F1AA2A6F1003CC510 /* SelflessTests */,
 				1BC2DF741AA2A6F1003CC510 /* Products */,
@@ -95,6 +118,8 @@
 				810DC3F91AA2AB8E006230FC /* SignUpViewController.m */,
 				810DC3FB1AA2AB9B006230FC /* MainViewController.h */,
 				810DC3FC1AA2AB9B006230FC /* MainViewController.m */,
+				810DC3FE1AA2AC49006230FC /* RNFrostedSidebar.h */,
+				810DC3FF1AA2AC49006230FC /* RNFrostedSidebar.m */,
 				1BC2DF801AA2A6F1003CC510 /* Main.storyboard */,
 				1BC2DF831AA2A6F1003CC510 /* Images.xcassets */,
 				1BC2DF851AA2A6F1003CC510 /* LaunchScreen.xib */,
@@ -232,6 +257,7 @@
 			files = (
 				1BC2DF7C1AA2A6F1003CC510 /* AppDelegate.m in Sources */,
 				1BC2DF791AA2A6F1003CC510 /* main.m in Sources */,
+				810DC4001AA2AC49006230FC /* RNFrostedSidebar.m in Sources */,
 				810DC3FA1AA2AB8E006230FC /* SignUpViewController.m in Sources */,
 				810DC3FD1AA2AB9B006230FC /* MainViewController.m in Sources */,
 				810DC3F71AA2AB77006230FC /* LoginViewController.m in Sources */,
