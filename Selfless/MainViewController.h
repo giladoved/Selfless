@@ -13,4 +13,5 @@
 
 - (IBAction)sidebarButtonPressed:(id)sender;
 @property (weak, nonatomic) IBOutlet UIButton *sidebarButton;
+@property (strong, nonatomic) RNFrostedSidebar* callout;
 @end

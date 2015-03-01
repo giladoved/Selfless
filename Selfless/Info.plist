@@ -9,7 +9,7 @@
 			<string>Editor</string>
 			<key>CFBundleURLSchemes</key>
 			<array>
-				<string>igdd12116b383d40b8a3cda5f8170cc0e7</string>
+				<string>ig8d257fe4486d4b1c8722dd6ef51665ff://authorize</string>
 			</array>
 		</dict>
 	</array>

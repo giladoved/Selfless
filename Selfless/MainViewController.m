@@ -19,7 +19,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    self.optionIndices = [NSMutableIndexSet indexSetWithIndex:1];
+    self.optionIndices = [NSMutableIndexSet indexSet];
 
 }
 
@@ -47,9 +47,11 @@
                         [UIColor colorWithRed:119/255.f green:152/255.f blue:255/255.f alpha:1],
                         ];
 
-    RNFrostedSidebar *callout = [[RNFrostedSidebar alloc] initWithImages:images selectedIndices:self.optionIndices borderColors:colors];
-    callout.delegate = self;
-    [callout show];
+    _callout = [[RNFrostedSidebar alloc] initWithImages:images selectedIndices:self.optionIndices borderColors:colors];
+    _callout.isSingleSelect = YES;
+    _callout.width = 110;
+    _callout.delegate = self;
+    [_callout show];
 }
 
 
@@ -63,14 +65,21 @@
 }
 
 - (void)sidebar:(RNFrostedSidebar *)sidebar didEnable:(BOOL)itemEnabled itemAtIndex:(NSUInteger)index {
+    static int previousIndex;
     NSLog(@"index valye is %d", index);
     if (itemEnabled) {
         [self.optionIndices addIndex:index];
+        previousIndex = index;
     }
     else {
         [self.optionIndices removeIndex:index];
     }
 }
+
+- (void)sidebar:(RNFrostedSidebar *)sidebar didDismissFromScreenAnimated:(BOOL)animatedYesOrNo{
+    
+}
+
 
 
 @end

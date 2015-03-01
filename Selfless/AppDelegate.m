@@ -5,7 +5,7 @@
 //  Created by Gilad Oved on 2/28/15.
 //  Copyright (c) 2015 selfles. All rights reserved.
 //
-#define APP_ID @"dd12116b383d40b8a3cda5f8170cc0e7"
+#define APP_ID @"8d257fe4486d4b1c8722dd6ef51665ff"
 
 
 #import "AppDelegate.h"
@@ -22,11 +22,14 @@
     self.instagram = [[Instagram alloc] initWithClientId:APP_ID
                                                 delegate:nil];
     
+    
+    
     [[UIApplication sharedApplication] registerUserNotificationSettings:[UIUserNotificationSettings settingsForTypes:(UIUserNotificationTypeSound | UIUserNotificationTypeAlert | UIUserNotificationTypeBadge) categories:nil]];
     [[UIApplication sharedApplication] registerForRemoteNotifications];
     
     return YES;
-}
+}//auth/instagram/callback
+//users/auth/instagram/callback
 
 - (void)application:(UIApplication *)app didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)deviceToken {
     NSString *device = [deviceToken description];

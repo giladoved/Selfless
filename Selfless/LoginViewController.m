@@ -8,6 +8,7 @@
 
 #import "LoginViewController.h"
 #import "InstaLoginViewController.h"
+#import "SignUpViewController.h"
 
 @interface LoginViewController ()
 
@@ -38,6 +39,7 @@
 - (IBAction)singInButtonPressed:(id)sender {
     //InstaLoginViewController *instaVC = [[InstaLoginViewController alloc] initWithNibName:nil bundle:nil];
     //[self presentViewController:instaVC animated:YES completion:nil];
+    [self performSegueWithIdentifier:@"loginToMain" sender:nil];
 }
 
 

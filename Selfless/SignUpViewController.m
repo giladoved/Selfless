@@ -9,6 +9,7 @@
 #import "SignUpViewController.h"
 #import "CardIO.h"
 #import "AppDelegate.h"
+#import "MainViewController.h"
 
 @interface SignUpViewController () <CardIOPaymentViewControllerDelegate, UIPickerViewDataSource, UIPickerViewDelegate> {
     NSArray *listOfCharities;
@@ -33,11 +34,15 @@
         appDelegate.instagram.accessToken = [[NSUserDefaults standardUserDefaults] objectForKey:@"accessToken"];
         appDelegate.instagram.sessionDelegate = self;
         if ([appDelegate.instagram isSessionValid]) {
-            [self performSegueWithIdentifier:@"signUpToMain" sender:nil];
+            UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+            MainViewController *vc = (MainViewController *)[storyboard instantiateViewControllerWithIdentifier:@"MainViewController"];
+            [self presentViewController:vc animated:YES completion:nil];
         } else {
             [appDelegate.instagram authorize:[NSArray arrayWithObjects:@"comments", @"likes", nil]];
         }
     }
+    [_blurView setImage:[UIImage imageNamed:@"main_background_blur.jpg"]];
+
 }
 
 - (void)viewWillAppear:(BOOL)animated {
@@ -92,59 +97,6 @@
     // This method is triggered whenever the user makes a change to the picker selection.
     // The parameter named row and component represents what was selected.
 }
-
-- (IBAction)registerUser:(id)sender {
-    donePressed = YES;
-    [self login];
-}
-
-
--(void)login {
-    AppDelegate* appDelegate = (AppDelegate*)[UIApplication sharedApplication].delegate;
-    [appDelegate.instagram authorize:[NSArray arrayWithObjects:@"comments", @"likes", nil]];
-}
-
-#pragma - IGSessionDelegate
-
--(void)igDidLogin {
-    NSLog(@"Instagram did login");
-    // here i can store accessToken
-    AppDelegate* appDelegate = (AppDelegate*)[UIApplication sharedApplication].delegate;
-    [[NSUserDefaults standardUserDefaults] setObject:appDelegate.instagram.accessToken forKey:@"accessToken"];
-    [[NSUserDefaults standardUserDefaults] synchronize];
-    
-    [self performSegueWithIdentifier:@"signUpToMain" sender:nil];
-}
-
--(void)igDidNotLogin:(BOOL)cancelled {
-    NSLog(@"Instagram did not login");
-    NSString* message = nil;
-    if (cancelled) {
-        message = @"Access cancelled!";
-    } else {
-        message = @"Access denied!";
-    }
-    UIAlertView* alertView = [[UIAlertView alloc] initWithTitle:@"Error"
-                                                        message:message
-                                                       delegate:nil
-                                              cancelButtonTitle:@"Ok"
-                                              otherButtonTitles:nil];
-    [alertView show];
-}
-
--(void)igDidLogout {
-    NSLog(@"Instagram did logout");
-    // remove the accessToken
-    [[NSUserDefaults standardUserDefaults] setObject:nil forKey:@"accessToken"];
-    [[NSUserDefaults standardUserDefaults] synchronize];
-}
-
--(void)igSessionInvalidated {
-    NSLog(@"Instagram session was invalidated");
-}
-
-
-
 
 
 @end

@@ -2,8 +2,9 @@
 # platform :ios, '6.0'
 
 target 'Selfless' do
-    platform :ios, '6.1'
+	platform :ios, '8.0'
     pod 'CardIO'
+    pod 'iOS-blur'
 end
 
 target 'SelflessTests' do
