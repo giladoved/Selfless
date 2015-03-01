@@ -69,7 +69,7 @@
 
 
 - (IBAction)sidebarButtonPressed:(id)sender {
-    NSArray *images = @[
+    _images = @[
                         [UIImage imageNamed:@"feed"],
                         [UIImage imageNamed:@"profile"],
                         [UIImage imageNamed:@"charity"],
@@ -78,7 +78,7 @@
                         [UIImage imageNamed:@"about"],
                         [UIImage imageNamed:@"logout"]
                         ];
-    NSArray *colors = @[
+    _colors = @[
                         [UIColor colorWithRed:1.0 green:1.0 blue:1.0 alpha:1.0],
                         [UIColor colorWithRed:1.0 green:1.0 blue:1.0 alpha:1.0],
                         [UIColor colorWithRed:1.0 green:1.0 blue:1.0 alpha:1.0],
@@ -88,7 +88,7 @@
                         [UIColor colorWithRed:1.0 green:1.0 blue:1.0 alpha:1.0]
                         ];
 
-    _callout = [[RNFrostedSidebar alloc] initWithImages:images selectedIndices:self.optionIndices borderColors:colors];
+    _callout = [[RNFrostedSidebar alloc] initWithImages:_images selectedIndices:self.optionIndices borderColors:_colors];
     _callout.isSingleSelect = YES;
     _callout.width = 110;
     _callout.borderWidth = 5.0;
@@ -116,10 +116,17 @@
     else {
         [self.optionIndices removeIndex:index];
     }
+    [_optionIndices removeAllIndexes];
+    [_optionIndices addIndex:index];
 }
 
 - (void)sidebar:(RNFrostedSidebar *)sidebar didDismissFromScreenAnimated:(BOOL)animatedYesOrNo{
-    
+    _callout = [[RNFrostedSidebar alloc] initWithImages:_images selectedIndices:_optionIndices borderColors:_colors];
+    _callout.isSingleSelect = YES;
+    _callout.width = 110;
+    _callout.borderWidth = 5.0;
+    _callout.delegate = self;
+    _callout.itemBackgroundColor = [[UIColor whiteColor] colorWithAlphaComponent:.6];
 }
 
 - (void)initModViewIndex:(int)index{

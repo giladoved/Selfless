@@ -26,7 +26,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
+    //[self.loadIndicator startAnimating];
     NSString* authURL = nil;
     
     if ([typeOfAuthentication isEqualToString:@"UNSIGNED"])
@@ -156,6 +156,7 @@
     NSLog(@"successfully logged in with Tocken == %@",dict[@"access_token"]);
     [self.webview stopLoading];
     //Register on the server
+    /*
     NSString *pushId = [[NSUserDefaults standardUserDefaults] objectForKey:@"pushToken"];
     NSURL *URL = [NSURL URLWithString:@"http://private-anon-d3281e586-selfless.apiary-mock.com/user"];
     
@@ -190,6 +191,7 @@
                                                             NSLog(@"Response Body:\n%@\n", body);
                                                         }];
                           [task resume];
+     */
     [self goToMain];
 }
 

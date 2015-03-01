@@ -44,7 +44,7 @@
 		810492C11AA30D8C0009EF39 /* settings_white.png in Resources */ = {isa = PBXBuildFile; fileRef = 810492B71AA30D8C0009EF39 /* settings_white.png */; };
 		810492C21AA30D8C0009EF39 /* star83.png in Resources */ = {isa = PBXBuildFile; fileRef = 810492B81AA30D8C0009EF39 /* star83.png */; };
 		810492C31AA30D8C0009EF39 /* stats20.png in Resources */ = {isa = PBXBuildFile; fileRef = 810492B91AA30D8C0009EF39 /* stats20.png */; };
-		810492C41AA30D8C0009EF39 /* user58.png in Resources */ = {isa = PBXBuildFile; fileRef = 810492BA1AA30D8C0009EF39 /* user58.png */; };
+		810492C41AA30D8C0009EF39 /* profile_white.png in Resources */ = {isa = PBXBuildFile; fileRef = 810492BA1AA30D8C0009EF39 /* profile_white.png */; };
 		810492CA1AA32D940009EF39 /* IGRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 810492C71AA32D940009EF39 /* IGRequest.m */; };
 		810492CB1AA32D940009EF39 /* Instagram.m in Sources */ = {isa = PBXBuildFile; fileRef = 810492C91AA32D940009EF39 /* Instagram.m */; };
 		810492CF1AA33B5A0009EF39 /* InstaAuthViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 810492CE1AA33B5A0009EF39 /* InstaAuthViewController.m */; };
@@ -120,7 +120,7 @@
 		810492B71AA30D8C0009EF39 /* settings_white.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = settings_white.png; sourceTree = "<group>"; };
 		810492B81AA30D8C0009EF39 /* star83.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = star83.png; sourceTree = "<group>"; };
 		810492B91AA30D8C0009EF39 /* stats20.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = stats20.png; sourceTree = "<group>"; };
-		810492BA1AA30D8C0009EF39 /* user58.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = user58.png; sourceTree = "<group>"; };
+		810492BA1AA30D8C0009EF39 /* profile_white.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = profile_white.png; sourceTree = "<group>"; };
 		810492C51AA32D940009EF39 /* IGConnect.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = IGConnect.h; path = Selfless/IGConnect.h; sourceTree = "<group>"; };
 		810492C61AA32D940009EF39 /* IGRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = IGRequest.h; path = Selfless/IGRequest.h; sourceTree = "<group>"; };
 		810492C71AA32D940009EF39 /* IGRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = IGRequest.m; path = Selfless/IGRequest.m; sourceTree = "<group>"; };
@@ -293,7 +293,7 @@
 				810492B71AA30D8C0009EF39 /* settings_white.png */,
 				810492B81AA30D8C0009EF39 /* star83.png */,
 				810492B91AA30D8C0009EF39 /* stats20.png */,
-				810492BA1AA30D8C0009EF39 /* user58.png */,
+				810492BA1AA30D8C0009EF39 /* profile_white.png */,
 			);
 			path = png;
 			sourceTree = "<group>";
@@ -430,7 +430,7 @@
 				810492A81AA2EC4E0009EF39 /* SettingsViewController.xib in Resources */,
 				810492BB1AA30D8C0009EF39 /* door13.png in Resources */,
 				1BC2DF871AA2A6F1003CC510 /* LaunchScreen.xib in Resources */,
-				810492C41AA30D8C0009EF39 /* user58.png in Resources */,
+				810492C41AA30D8C0009EF39 /* profile_white.png in Resources */,
 				810492BC1AA30D8C0009EF39 /* faq8.png in Resources */,
 				810492BD1AA30D8C0009EF39 /* heart318.png in Resources */,
 				8104928F1AA2E9140009EF39 /* FeedViewController.xib in Resources */,

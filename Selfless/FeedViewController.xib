@@ -25,7 +25,7 @@
                     <nil key="highlightedColor"/>
                 </label>
             </subviews>
-            <color key="backgroundColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
+            <color key="backgroundColor" red="0.054901960780000002" green="0.63529411759999999" blue="0.61176470589999998" alpha="1" colorSpace="calibratedRGB"/>
             <constraints>
                 <constraint firstAttribute="centerX" secondItem="nci-ph-jwj" secondAttribute="centerX" id="Ozn-bY-S2h"/>
                 <constraint firstAttribute="centerY" secondItem="nci-ph-jwj" secondAttribute="centerY" id="wCE-hq-VU4"/>

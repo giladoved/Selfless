@@ -14,6 +14,70 @@
             <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="🎁" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3u6-kb-5H5">
+                    <rect key="frame" x="289" y="25" width="22" height="21"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="21" id="Xpz-zj-Ifs"/>
+                        <constraint firstAttribute="width" constant="22" id="iQh-Od-jbm"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="About Selfless" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lEB-f0-Ait">
+                    <rect key="frame" x="221" y="54" width="158" height="26"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="158" id="PIT-3O-i7c"/>
+                        <constraint firstAttribute="height" constant="26" id="dyD-Tx-hkO"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="21"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hBY-SV-qiv">
+                    <rect key="frame" x="8" y="88" width="584" height="211"/>
+                    <string key="text">Selfless is a new app that works through Instagram to turn your social media experience into a selfless one. Take your Instagram experience to the next level with Selfless and watch posts be used to raise money for charity.
+</string>
+                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <fontDescription key="fontDescription" name="Avenir-Light" family="Avenir" pointSize="15"/>
+                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                </textView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="🎁" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dJv-mr-2DT">
+                    <rect key="frame" x="289" y="307" width="22" height="21"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="21" id="EmS-z4-YJb"/>
+                        <constraint firstAttribute="width" constant="22" id="i6j-xw-Fyf"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="How Selfless Works" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ADG-g3-7PA">
+                    <rect key="frame" x="207" y="336" width="187" height="29"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="187" id="D96-bN-266"/>
+                        <constraint firstAttribute="height" constant="29" id="WAa-Sd-g3G"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="21"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oVa-UI-pQq">
+                    <rect key="frame" x="8" y="373" width="584" height="211"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <string key="text">Once you join the Selfless world, get ready to #donateSelfless! Through the app you can find the Instagram users you follow who also use Selfless, letting you know that you can simply comment #donateSelfless on any of their photos to donate $0.01 to the charity that the user supports! Even more, when you post a photo, any selfless user that comments #donateSelfless on your photos is donating $0.01 to the charity that you have chosen to support.</string>
+                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <fontDescription key="fontDescription" name="Avenir-Light" family="Avenir" pointSize="15"/>
+                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                </textView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jfh-dH-rjQ">
+                    <rect key="frame" x="269" y="149" width="100" height="300"/>
+                    <string key="text">Selfless is a new app that works through Instagram to turn your social media experience into a selfless one. Take your Instagram experience to the next level with Selfless and watch posts be used to raise money for charity.
+</string>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="About" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="33M-j8-LyK">
                     <rect key="frame" x="265" y="289" width="70" height="21"/>
                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -21,13 +85,30 @@
                     <nil key="highlightedColor"/>
                 </label>
             </subviews>
-            <color key="backgroundColor" red="0.68349199359476576" green="0.83823106434031924" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+            <color key="backgroundColor" red="0.054901960780000002" green="0.63529411759999999" blue="0.61176470589999998" alpha="1" colorSpace="calibratedRGB"/>
             <constraints>
+                <constraint firstAttribute="centerX" secondItem="dJv-mr-2DT" secondAttribute="centerX" id="43n-mb-ETa"/>
+                <constraint firstItem="lEB-f0-Ait" firstAttribute="top" secondItem="3u6-kb-5H5" secondAttribute="bottom" constant="8" id="4Tt-gi-0Sm"/>
+                <constraint firstAttribute="trailing" secondItem="oVa-UI-pQq" secondAttribute="trailing" constant="8" id="7T8-Xb-r5t"/>
+                <constraint firstItem="oVa-UI-pQq" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="8" id="7dI-ej-YQH"/>
+                <constraint firstItem="hBY-SV-qiv" firstAttribute="top" secondItem="lEB-f0-Ait" secondAttribute="bottom" constant="8" id="93d-5V-c85"/>
+                <constraint firstItem="oVa-UI-pQq" firstAttribute="top" secondItem="ADG-g3-7PA" secondAttribute="bottom" constant="8" id="A5R-li-2PL"/>
+                <constraint firstItem="dJv-mr-2DT" firstAttribute="top" secondItem="hBY-SV-qiv" secondAttribute="bottom" constant="8" id="Clu-oG-Opa"/>
+                <constraint firstAttribute="centerX" secondItem="ADG-g3-7PA" secondAttribute="centerX" id="QTx-G0-hUK"/>
+                <constraint firstAttribute="centerX" secondItem="3u6-kb-5H5" secondAttribute="centerX" id="ZSY-dh-cjX"/>
+                <constraint firstItem="hBY-SV-qiv" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="8" id="byI-cT-1Fs"/>
+                <constraint firstAttribute="trailing" secondItem="hBY-SV-qiv" secondAttribute="trailing" constant="8" id="cYw-BP-vrW"/>
+                <constraint firstItem="ADG-g3-7PA" firstAttribute="top" secondItem="dJv-mr-2DT" secondAttribute="bottom" constant="8" id="diU-63-TqN"/>
+                <constraint firstItem="oVa-UI-pQq" firstAttribute="height" secondItem="hBY-SV-qiv" secondAttribute="height" id="e2B-SU-e6v"/>
+                <constraint firstItem="3u6-kb-5H5" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="25" id="kdx-6c-gcp"/>
+                <constraint firstAttribute="centerX" secondItem="lEB-f0-Ait" secondAttribute="centerX" id="mKK-Hu-Aqr"/>
                 <constraint firstAttribute="centerX" secondItem="33M-j8-LyK" secondAttribute="centerX" id="n88-Le-nqn"/>
                 <constraint firstAttribute="centerY" secondItem="33M-j8-LyK" secondAttribute="centerY" id="ngW-cE-fjD"/>
+                <constraint firstAttribute="bottom" secondItem="oVa-UI-pQq" secondAttribute="bottom" constant="16" id="z8Z-T5-AwD"/>
             </constraints>
             <variation key="default">
                 <mask key="subviews">
+                    <exclude reference="Jfh-dH-rjQ"/>
                     <exclude reference="33M-j8-LyK"/>
                 </mask>
             </variation>

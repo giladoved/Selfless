@@ -22,4 +22,7 @@
 @property (weak, nonatomic) IBOutlet UIView *modView;
 @property (strong, nonatomic) RNFrostedSidebar* callout;
 @property (strong, nonatomic) id instagramResult;
+@property (strong, nonatomic) NSArray* images;
+@property (strong, nonatomic) NSArray* colors;;
+
 @end
