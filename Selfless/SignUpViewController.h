@@ -11,4 +11,8 @@
 
 @interface SignUpViewController : UIViewController
 
+- (IBAction)scanCardClicked:(id)sender;
+@property (weak, nonatomic) IBOutlet UILabel *creditCardLbl;
+@property (weak, nonatomic) IBOutlet UIPickerView *pickerView;
+
 @end
