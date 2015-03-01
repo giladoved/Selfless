@@ -10,31 +10,31 @@
 	<string>Selfless</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
-		<key>1B87979A193E71A4A80E9386430CA61D64BFC245</key>
-		<string>github.com:giladoved/hacks.git</string>
+		<key>4B8D17E36CE8F30810CA9A929590C3728727FFD4</key>
+		<string>https://github.com/giladoved/Selfless.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>selfless/Selfless/Selfless.xcodeproj</string>
+	<string>Selfless.xcodeproj</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
-		<key>1B87979A193E71A4A80E9386430CA61D64BFC245</key>
-		<string>../../../..</string>
+		<key>4B8D17E36CE8F30810CA9A929590C3728727FFD4</key>
+		<string>../..</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
-	<string>github.com:giladoved/hacks.git</string>
+	<string>https://github.com/giladoved/Selfless.git</string>
 	<key>IDESourceControlProjectVersion</key>
 	<integer>111</integer>
 	<key>IDESourceControlProjectWCCIdentifier</key>
-	<string>1B87979A193E71A4A80E9386430CA61D64BFC245</string>
+	<string>4B8D17E36CE8F30810CA9A929590C3728727FFD4</string>
 	<key>IDESourceControlProjectWCConfigurations</key>
 	<array>
 		<dict>
 			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
 			<string>public.vcs.git</string>
 			<key>IDESourceControlWCCIdentifierKey</key>
-			<string>1B87979A193E71A4A80E9386430CA61D64BFC245</string>
+			<string>4B8D17E36CE8F30810CA9A929590C3728727FFD4</string>
 			<key>IDESourceControlWCCName</key>
-			<string>hacks</string>
+			<string>Selfless</string>
 		</dict>
 	</array>
 </dict>
