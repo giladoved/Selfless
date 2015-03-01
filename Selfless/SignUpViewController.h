@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "CardIOPaymentViewControllerDelegate.h"
 
 @interface SignUpViewController : UIViewController
 
