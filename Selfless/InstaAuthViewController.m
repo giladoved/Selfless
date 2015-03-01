@@ -8,6 +8,7 @@
 
 #import "InstaAuthViewController.h"
 #import "MainViewController.h"
+#import "AFHTTPRequestOperationManager.h"
 
 #define INSTAGRAM_AUTHURL                               @"https://api.instagram.com/oauth/authorize/"
 #define INSTAGRAM_APIURl                                @"https://api.instagram.com/v1/users/"
@@ -75,7 +76,6 @@
 
 - (void) webViewDidFinishLoad:(UIWebView *)webView
 {
-    [self goToMain];
     /*[UIApplication sharedApplication].networkActivityIndicatorVisible = NO;
     [self.activityIndicator stopAnimating];
     [self.webview.layer removeAllAnimations];
@@ -94,15 +94,15 @@
 - (BOOL) checkRequestForCallbackURL:(NSURLRequest*) request
 {
     NSString* urlString = [[request URL] absoluteString];
+    NSLog(@"urlsTR: %@", urlString);
     
     if ([typeOfAuthentication isEqualToString:@"UNSIGNED"])
     {
         // check, if auth was succesfull (check for redirect URL)
         if([urlString hasPrefix: INSTAGRAM_REDIRECT_URI])
         {
-            // extract and handle access token
-            NSRange range = [urlString rangeOfString: @"#access_token="];
-            [self handleAuth: [urlString substringFromIndex: range.location+range.length]];
+            NSRange range = [urlString rangeOfString: @"code="];
+            [self makePostRequest:[urlString substringFromIndex: range.location+range.length]];
             return NO;
         }
     }
@@ -110,7 +110,6 @@
     {
         if([urlString hasPrefix: INSTAGRAM_REDIRECT_URI])
         {
-            // extract and handle code
             NSRange range = [urlString rangeOfString: @"code="];
             [self makePostRequest:[urlString substringFromIndex: range.location+range.length]];
             return NO;
@@ -123,6 +122,26 @@
 
 -(void)makePostRequest:(NSString *)code
 {
+    /*NSString *post = [NSString stringWithFormat:@"client_id=%@&client_secret=%@&grant_type=authorization_code&redirect_uri=%@&code=%@",INSTAGRAM_CLIENT_ID,INSTAGRAM_CLIENTSERCRET,INSTAGRAM_REDIRECT_URI,code];
+    NSMutableURLRequest *requestData = [NSMutableURLRequest requestWithURL:
+                                        [NSURL URLWithString:@"https://api.instagram.com/oauth/access_token"]];
+    AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
+    NSDictionary *params = @{
+                             @"insta_id": dict[@"user"][@"id"],
+                             @"insta_name": dict[@"user"][@"name"],
+                             @"os_type": @"iOS",
+                             @"push_id": pushId,
+                             @"auth_token": dict[@"access_token"]
+                             };
+    [manager POST:@"http://private-anon-d3281e586-selfless.apiary-mock.com/user" parameters:params success:^(AFHTTPRequestOperation *operation, id responseObject) {
+        NSLog(@"JSON: %@", responseObject);
+    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+        NSLog(@"Error: %@", error);
+    }];*/
+    
+    
+    
+    
     NSString *post = [NSString stringWithFormat:@"client_id=%@&client_secret=%@&grant_type=authorization_code&redirect_uri=%@&code=%@",INSTAGRAM_CLIENT_ID,INSTAGRAM_CLIENTSERCRET,INSTAGRAM_REDIRECT_URI,code];
     NSData *postData = [post dataUsingEncoding:NSASCIIStringEncoding allowLossyConversion:YES];
     NSString *postLength = [NSString stringWithFormat:@"%lu", (unsigned long)[postData length]];
@@ -137,7 +156,8 @@
     NSURLResponse *response = NULL;
     NSError *requestError = NULL;
     NSData *responseData = [NSURLConnection sendSynchronousRequest:requestData returningResponse:&response error:&requestError];
-    NSDictionary *dict = [NSJSONSerialization JSONObjectWithData:responseData options:NSJSONReadingAllowFragments error:nil];
+    NSLog(@"responsedata: %@", responseData);
+    NSDictionary *dict = [NSJSONSerialization JSONObjectWithData:responseData options:NSJSONWritingPrettyPrinted error:nil];
     //NSLog(@"PRINTING DICTIONARY %@",dict);
     [self handleAuth:dict];
     
@@ -153,43 +173,34 @@
 
 - (void) handleAuth: (NSDictionary*) dict
 {
+    NSLog(@"DIIIIIC:%@", dict);
     NSLog(@"successfully logged in with Tocken == %@",dict[@"access_token"]);
+    NSString *admin_token =dict[@"access_token"];
+    [[NSUserDefaults standardUserDefaults] setObject:admin_token forKey:@"admin_token"];
+    [[NSUserDefaults standardUserDefaults] synchronize];
+    
     [self.webview stopLoading];
-    //Register on the server
     NSString *pushId = [[NSUserDefaults standardUserDefaults] objectForKey:@"pushToken"];
-    NSURL *URL = [NSURL URLWithString:@"http://private-anon-d3281e586-selfless.apiary-mock.com/user"];
+    NSLog(@"user: %@", dict[@"user"]);
+    NSLog(@"user: %@", dict[@"access_token"]);
+    NSLog(@"user: %@", dict[@"user"][@"id"]);
+    NSLog(@"user: %@", dict[@"user"][@"name"]);
+
+    //Register on the server
+    AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
+    NSDictionary *params = @{
+                             @"insta_id": dict[@"user"][@"id"],
+                             @"insta_name": dict[@"user"][@"username"],
+                             @"os_type": @"iOS",
+                             @"push_id": pushId,
+                             @"auth_token": dict[@"access_token"]
+                             };
+    [manager POST:@"http://54.67.44.197:3000/v1/user" parameters:params success:^(AFHTTPRequestOperation *operation, id responseObject) {
+        NSLog(@"JSON: %@", responseObject);
+    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+        NSLog(@"Error: %@", error);
+    }];
     
-    NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:URL];
-    [request setHTTPMethod:@"POST"];
-    
-    [request setValue:@"application/json" forHTTPHeaderField:@"Content-Type"];
-    [request setHTTPBody:[@{
-                          @"insta_id": dict[@"user"][@"id"],
-                          @"insta_name": dict[@"user"][@"name"],
-                          @"os_type": @"iOS",
-                          @"push_id": pushId,
-                          @"auth_token": dict[@"access_token"]
-                          } dataUsingEncoding:NSUTF8StringEncoding]];
-                          
-                          NSURLSession *session = [NSURLSession sharedSession];
-                          NSURLSessionDataTask *task = [session dataTaskWithRequest:request
-                                                                  completionHandler:
-                                                        ^(NSData *data, NSURLResponse *response, NSError *error) {
-                                                            
-                                                            if (error) {
-                                                                // Handle error...
-                                                                return;
-                                                            }
-                                                            
-                                                            if ([response isKindOfClass:[NSHTTPURLResponse class]]) {
-                                                                NSLog(@"Response HTTP Status code: %ld\n", (long)[(NSHTTPURLResponse *)response statusCode]);
-                                                                NSLog(@"Response HTTP Headers:\n%@\n", [(NSHTTPURLResponse *)response allHeaderFields]);
-                                                            }
-                                                            
-                                                            NSString* body = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
-                                                            NSLog(@"Response Body:\n%@\n", body);
-                                                        }];
-                          [task resume];
     [self goToMain];
 }
 
