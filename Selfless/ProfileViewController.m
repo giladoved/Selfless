@@ -21,13 +21,13 @@
     NSLog(@"amdin token: %@", userInfo);
     NSString *bio = userInfo[@"bio"];
     NSString *fullname = userInfo[@"full_name"];
-    long *userID = (long)userInfo[@"id"];
+    //long *userID = (long)userInfo[@"id"];
     NSString *profilePictureURL = userInfo[@"profile_picture"];
     NSURL *imageUrl = [NSURL URLWithString:profilePictureURL];
     NSData *imageData = [NSData dataWithContentsOfURL:imageUrl];
     UIImage *profilePicture = [[UIImage alloc] initWithData:imageData];
     NSString *username = userInfo[@"username"];
-    NSString *website = userInfo[@"website"];
+    //NSString *website = userInfo[@"website"];
     
     _nameLabel.text = fullname;
     _usernameLabel.text = [NSString stringWithFormat:@"@%@",username];
@@ -38,6 +38,9 @@
     _imageView.layer.cornerRadius = 50;
     _imageView.layer.masksToBounds = NO;
     _imageView.clipsToBounds = YES;
+    NSURLRequest *request = [[NSURLRequest alloc] initWithURL:[NSURL URLWithString:@"http://54.67.44.197:3000"]];
+    [_webView loadRequest:request];
+                                                               
 
     
 }
