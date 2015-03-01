@@ -7,7 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "RNFrostedSidebar.h"
 
-@interface MainViewController : UIViewController
+@interface MainViewController : UIViewController <RNFrostedSidebarDelegate>
 
+- (IBAction)sidebarButtonPressed:(id)sender;
+@property (weak, nonatomic) IBOutlet UIButton *sidebarButton;
 @end

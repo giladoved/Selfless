@@ -22,6 +22,9 @@
 		810DC4061AA2AC79006230FC /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 810DC4051AA2AC79006230FC /* Foundation.framework */; };
 		810DC4081AA2AC7E006230FC /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 810DC4071AA2AC7E006230FC /* UIKit.framework */; };
 		810DC40A1AA2AC89006230FC /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 810DC4091AA2AC89006230FC /* CoreGraphics.framework */; };
+		810DC40F1AA2AF1F006230FC /* gear.png in Resources */ = {isa = PBXBuildFile; fileRef = 810DC40C1AA2AF1F006230FC /* gear.png */; };
+		810DC4101AA2AF1F006230FC /* profile.png in Resources */ = {isa = PBXBuildFile; fileRef = 810DC40D1AA2AF1F006230FC /* profile.png */; };
+		810DC4111AA2AF1F006230FC /* star.png in Resources */ = {isa = PBXBuildFile; fileRef = 810DC40E1AA2AF1F006230FC /* star.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +62,9 @@
 		810DC4051AA2AC79006230FC /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		810DC4071AA2AC7E006230FC /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		810DC4091AA2AC89006230FC /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		810DC40C1AA2AF1F006230FC /* gear.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = gear.png; sourceTree = "<group>"; };
+		810DC40D1AA2AF1F006230FC /* profile.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = profile.png; sourceTree = "<group>"; };
+		810DC40E1AA2AF1F006230FC /* star.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = star.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,11 +93,7 @@
 		1BC2DF6A1AA2A6F1003CC510 = {
 			isa = PBXGroup;
 			children = (
-				810DC4091AA2AC89006230FC /* CoreGraphics.framework */,
-				810DC4071AA2AC7E006230FC /* UIKit.framework */,
-				810DC4051AA2AC79006230FC /* Foundation.framework */,
-				810DC4031AA2AC75006230FC /* QuartzCore.framework */,
-				810DC4011AA2AC71006230FC /* Accelerate.framework */,
+				810DC40B1AA2ACBE006230FC /* Frameworks */,
 				1BC2DF751AA2A6F1003CC510 /* Selfless */,
 				1BC2DF8F1AA2A6F1003CC510 /* SelflessTests */,
 				1BC2DF741AA2A6F1003CC510 /* Products */,
@@ -111,6 +113,9 @@
 			isa = PBXGroup;
 			children = (
 				1BC2DF7A1AA2A6F1003CC510 /* AppDelegate.h */,
+				810DC40C1AA2AF1F006230FC /* gear.png */,
+				810DC40D1AA2AF1F006230FC /* profile.png */,
+				810DC40E1AA2AF1F006230FC /* star.png */,
 				1BC2DF7B1AA2A6F1003CC510 /* AppDelegate.m */,
 				810DC3F51AA2AB77006230FC /* LoginViewController.h */,
 				810DC3F61AA2AB77006230FC /* LoginViewController.m */,
@@ -152,6 +157,18 @@
 				1BC2DF911AA2A6F1003CC510 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		810DC40B1AA2ACBE006230FC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				810DC4091AA2AC89006230FC /* CoreGraphics.framework */,
+				810DC4071AA2AC7E006230FC /* UIKit.framework */,
+				810DC4051AA2AC79006230FC /* Foundation.framework */,
+				810DC4031AA2AC75006230FC /* QuartzCore.framework */,
+				810DC4011AA2AC71006230FC /* Accelerate.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -237,7 +254,10 @@
 			files = (
 				1BC2DF821AA2A6F1003CC510 /* Main.storyboard in Resources */,
 				1BC2DF871AA2A6F1003CC510 /* LaunchScreen.xib in Resources */,
+				810DC40F1AA2AF1F006230FC /* gear.png in Resources */,
+				810DC4101AA2AF1F006230FC /* profile.png in Resources */,
 				1BC2DF841AA2A6F1003CC510 /* Images.xcassets in Resources */,
+				810DC4111AA2AF1F006230FC /* star.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -34,4 +34,10 @@
 }
 */
 
+- (IBAction)singInButtonPressed:(id)sender {
+    [self performSegueWithIdentifier:@"loginToMain" sender:nil];
+}
+
+- (IBAction)signUpButtonPressed:(id)sender {
+}
 @end

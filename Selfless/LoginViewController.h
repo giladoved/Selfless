@@ -10,4 +10,29 @@
 
 @interface LoginViewController : UIViewController
 
+@property (weak, nonatomic) IBOutlet UIButton *signInButton;
+@property (weak, nonatomic) IBOutlet UIButton *signUpButton;
+
+- (IBAction)singInButtonPressed:(id)sender;
+- (IBAction)signUpButtonPressed:(id)sender;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 @end
