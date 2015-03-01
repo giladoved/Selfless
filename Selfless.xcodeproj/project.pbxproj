@@ -15,6 +15,13 @@
 		1BC2DF931AA2A6F1003CC510 /* SelflessTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1BC2DF921AA2A6F1003CC510 /* SelflessTests.m */; };
 		5EBB6B16567F97DDF038657E /* libPods-Selfless.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 32858206D0C03404289BE272 /* libPods-Selfless.a */; };
 		810492751AA2D4390009EF39 /* main_background_blur.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 810492741AA2D4390009EF39 /* main_background_blur.jpg */; };
+		810492811AA2E00D0009EF39 /* logout.png in Resources */ = {isa = PBXBuildFile; fileRef = 810492761AA2E00D0009EF39 /* logout.png */; };
+		810492821AA2E00D0009EF39 /* about.png in Resources */ = {isa = PBXBuildFile; fileRef = 810492771AA2E00D0009EF39 /* about.png */; };
+		810492831AA2E00D0009EF39 /* charity.png in Resources */ = {isa = PBXBuildFile; fileRef = 810492781AA2E00D0009EF39 /* charity.png */; };
+		810492861AA2E00D0009EF39 /* feed.png in Resources */ = {isa = PBXBuildFile; fileRef = 8104927B1AA2E00D0009EF39 /* feed.png */; };
+		810492871AA2E00D0009EF39 /* settings.png in Resources */ = {isa = PBXBuildFile; fileRef = 8104927C1AA2E00D0009EF39 /* settings.png */; };
+		810492891AA2E00D0009EF39 /* activity.png in Resources */ = {isa = PBXBuildFile; fileRef = 8104927E1AA2E00D0009EF39 /* activity.png */; };
+		8104928A1AA2E00D0009EF39 /* profile.png in Resources */ = {isa = PBXBuildFile; fileRef = 8104927F1AA2E00D0009EF39 /* profile.png */; };
 		810DC3F71AA2AB77006230FC /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 810DC3F61AA2AB77006230FC /* LoginViewController.m */; };
 		810DC3FA1AA2AB8E006230FC /* SignUpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 810DC3F91AA2AB8E006230FC /* SignUpViewController.m */; };
 		810DC3FD1AA2AB9B006230FC /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 810DC3FC1AA2AB9B006230FC /* MainViewController.m */; };
@@ -24,9 +31,6 @@
 		810DC4061AA2AC79006230FC /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 810DC4051AA2AC79006230FC /* Foundation.framework */; };
 		810DC4081AA2AC7E006230FC /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 810DC4071AA2AC7E006230FC /* UIKit.framework */; };
 		810DC40A1AA2AC89006230FC /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 810DC4091AA2AC89006230FC /* CoreGraphics.framework */; };
-		810DC40F1AA2AF1F006230FC /* gear.png in Resources */ = {isa = PBXBuildFile; fileRef = 810DC40C1AA2AF1F006230FC /* gear.png */; };
-		810DC4101AA2AF1F006230FC /* profile.png in Resources */ = {isa = PBXBuildFile; fileRef = 810DC40D1AA2AF1F006230FC /* profile.png */; };
-		810DC4111AA2AF1F006230FC /* star.png in Resources */ = {isa = PBXBuildFile; fileRef = 810DC40E1AA2AF1F006230FC /* star.png */; };
 		810DC4131AA2BC8A006230FC /* main_background.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 810DC4121AA2BC8A006230FC /* main_background.jpg */; };
 /* End PBXBuildFile section */
 
@@ -55,7 +59,14 @@
 		32858206D0C03404289BE272 /* libPods-Selfless.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Selfless.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		58CA1EED3ED4659091DC2B55 /* Pods-Selfless.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Selfless.release.xcconfig"; path = "Pods/Target Support Files/Pods-Selfless/Pods-Selfless.release.xcconfig"; sourceTree = "<group>"; };
 		6D52202ECBCB5632398508CB /* Pods-Selfless.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Selfless.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Selfless/Pods-Selfless.debug.xcconfig"; sourceTree = "<group>"; };
-		810492741AA2D4390009EF39 /* main_background_blur.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = main_background_blur.jpg; sourceTree = "<group>"; };
+		810492741AA2D4390009EF39 /* main_background_blur.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = main_background_blur.jpg; path = ../main_background_blur.jpg; sourceTree = "<group>"; };
+		810492761AA2E00D0009EF39 /* logout.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logout.png; sourceTree = "<group>"; };
+		810492771AA2E00D0009EF39 /* about.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = about.png; sourceTree = "<group>"; };
+		810492781AA2E00D0009EF39 /* charity.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = charity.png; sourceTree = "<group>"; };
+		8104927B1AA2E00D0009EF39 /* feed.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = feed.png; sourceTree = "<group>"; };
+		8104927C1AA2E00D0009EF39 /* settings.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = settings.png; sourceTree = "<group>"; };
+		8104927E1AA2E00D0009EF39 /* activity.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = activity.png; sourceTree = "<group>"; };
+		8104927F1AA2E00D0009EF39 /* profile.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = profile.png; sourceTree = "<group>"; };
 		810DC3F51AA2AB77006230FC /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
 		810DC3F61AA2AB77006230FC /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
 		810DC3F81AA2AB8E006230FC /* SignUpViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SignUpViewController.h; sourceTree = "<group>"; };
@@ -69,10 +80,7 @@
 		810DC4051AA2AC79006230FC /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		810DC4071AA2AC7E006230FC /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		810DC4091AA2AC89006230FC /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
-		810DC40C1AA2AF1F006230FC /* gear.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = gear.png; sourceTree = "<group>"; };
-		810DC40D1AA2AF1F006230FC /* profile.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = profile.png; sourceTree = "<group>"; };
-		810DC40E1AA2AF1F006230FC /* star.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = star.png; sourceTree = "<group>"; };
-		810DC4121AA2BC8A006230FC /* main_background.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = main_background.jpg; sourceTree = "<group>"; };
+		810DC4121AA2BC8A006230FC /* main_background.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = main_background.jpg; path = ../main_background.jpg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,6 +110,7 @@
 		1BC2DF6A1AA2A6F1003CC510 = {
 			isa = PBXGroup;
 			children = (
+				810492801AA2E00D0009EF39 /* images */,
 				810DC40B1AA2ACBE006230FC /* Frameworks */,
 				1BC2DF751AA2A6F1003CC510 /* Selfless */,
 				1BC2DF8F1AA2A6F1003CC510 /* SelflessTests */,
@@ -123,18 +132,13 @@
 			isa = PBXGroup;
 			children = (
 				1BC2DF7A1AA2A6F1003CC510 /* AppDelegate.h */,
-				810DC40C1AA2AF1F006230FC /* gear.png */,
-				810DC40D1AA2AF1F006230FC /* profile.png */,
-				810DC40E1AA2AF1F006230FC /* star.png */,
 				1BC2DF7B1AA2A6F1003CC510 /* AppDelegate.m */,
 				810DC3F51AA2AB77006230FC /* LoginViewController.h */,
 				810DC3F61AA2AB77006230FC /* LoginViewController.m */,
 				810DC3F81AA2AB8E006230FC /* SignUpViewController.h */,
 				810DC3F91AA2AB8E006230FC /* SignUpViewController.m */,
-				810492741AA2D4390009EF39 /* main_background_blur.jpg */,
 				810DC3FB1AA2AB9B006230FC /* MainViewController.h */,
 				810DC3FC1AA2AB9B006230FC /* MainViewController.m */,
-				810DC4121AA2BC8A006230FC /* main_background.jpg */,
 				810DC3FE1AA2AC49006230FC /* RNFrostedSidebar.h */,
 				810DC3FF1AA2AC49006230FC /* RNFrostedSidebar.m */,
 				1BC2DF801AA2A6F1003CC510 /* Main.storyboard */,
@@ -169,6 +173,23 @@
 				1BC2DF911AA2A6F1003CC510 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		810492801AA2E00D0009EF39 /* images */ = {
+			isa = PBXGroup;
+			children = (
+				810492741AA2D4390009EF39 /* main_background_blur.jpg */,
+				810DC4121AA2BC8A006230FC /* main_background.jpg */,
+				810492761AA2E00D0009EF39 /* logout.png */,
+				810492771AA2E00D0009EF39 /* about.png */,
+				810492781AA2E00D0009EF39 /* charity.png */,
+				8104927B1AA2E00D0009EF39 /* feed.png */,
+				8104927C1AA2E00D0009EF39 /* settings.png */,
+				8104927E1AA2E00D0009EF39 /* activity.png */,
+				8104927F1AA2E00D0009EF39 /* profile.png */,
+			);
+			name = images;
+			path = Selfless/images;
 			sourceTree = "<group>";
 		};
 		810DC40B1AA2ACBE006230FC /* Frameworks */ = {
@@ -276,14 +297,18 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8104928A1AA2E00D0009EF39 /* profile.png in Resources */,
 				1BC2DF821AA2A6F1003CC510 /* Main.storyboard in Resources */,
+				810492871AA2E00D0009EF39 /* settings.png in Resources */,
+				810492891AA2E00D0009EF39 /* activity.png in Resources */,
+				810492821AA2E00D0009EF39 /* about.png in Resources */,
 				1BC2DF871AA2A6F1003CC510 /* LaunchScreen.xib in Resources */,
 				810DC4131AA2BC8A006230FC /* main_background.jpg in Resources */,
-				810DC40F1AA2AF1F006230FC /* gear.png in Resources */,
-				810DC4101AA2AF1F006230FC /* profile.png in Resources */,
+				810492861AA2E00D0009EF39 /* feed.png in Resources */,
 				1BC2DF841AA2A6F1003CC510 /* Images.xcassets in Resources */,
-				810DC4111AA2AF1F006230FC /* star.png in Resources */,
 				810492751AA2D4390009EF39 /* main_background_blur.jpg in Resources */,
+				810492811AA2E00D0009EF39 /* logout.png in Resources */,
+				810492831AA2E00D0009EF39 /* charity.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -464,7 +489,7 @@
 			baseConfigurationReference = 6D52202ECBCB5632398508CB /* Pods-Selfless.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Developer: Gilad Oved (XG726H4U35)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Gilad Oved (XG726H4U35)";
 				INFOPLIST_FILE = Selfless/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
@@ -479,7 +504,7 @@
 			baseConfigurationReference = 58CA1EED3ED4659091DC2B55 /* Pods-Selfless.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Developer: Gilad Oved (XG726H4U35)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Gilad Oved (XG726H4U35)";
 				INFOPLIST_FILE = Selfless/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;

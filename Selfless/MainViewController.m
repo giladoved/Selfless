@@ -20,6 +20,7 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     self.optionIndices = [NSMutableIndexSet indexSet];
+    [self.view setBackgroundColor:[UIColor colorWithRed:134.0/255.0 green:226.0/255.0 blue:213.0/255.0 alpha:1.0]];
 
 }
 
@@ -31,26 +32,30 @@
 
 - (IBAction)sidebarButtonPressed:(id)sender {
     NSArray *images = @[
-                        [UIImage imageNamed:@"gear"],
+                        [UIImage imageNamed:@"feed"],
                         [UIImage imageNamed:@"profile"],
-                        [UIImage imageNamed:@"star"],
-                        [UIImage imageNamed:@"gear"],
-                        [UIImage imageNamed:@"profile"],
-                        [UIImage imageNamed:@"star"],
+                        [UIImage imageNamed:@"charity"],
+                        [UIImage imageNamed:@"activity"],
+                        [UIImage imageNamed:@"settings"],
+                        [UIImage imageNamed:@"about"],
+                        [UIImage imageNamed:@"logout"]
                         ];
     NSArray *colors = @[
-                        [UIColor colorWithRed:240/255.f green:159/255.f blue:254/255.f alpha:1],
-                        [UIColor colorWithRed:255/255.f green:137/255.f blue:167/255.f alpha:1],
-                        [UIColor colorWithRed:119/255.f green:152/255.f blue:255/255.f alpha:1],
-                        [UIColor colorWithRed:240/255.f green:159/255.f blue:254/255.f alpha:1],
-                        [UIColor colorWithRed:255/255.f green:137/255.f blue:167/255.f alpha:1],
-                        [UIColor colorWithRed:119/255.f green:152/255.f blue:255/255.f alpha:1],
+                        [UIColor colorWithRed:1.0 green:1.0 blue:1.0 alpha:1.0],
+                        [UIColor colorWithRed:1.0 green:1.0 blue:1.0 alpha:1.0],
+                        [UIColor colorWithRed:1.0 green:1.0 blue:1.0 alpha:1.0],
+                        [UIColor colorWithRed:1.0 green:1.0 blue:1.0 alpha:1.0],
+                        [UIColor colorWithRed:1.0 green:1.0 blue:1.0 alpha:1.0],
+                        [UIColor colorWithRed:1.0 green:1.0 blue:1.0 alpha:1.0],
+                        [UIColor colorWithRed:1.0 green:1.0 blue:1.0 alpha:1.0]
                         ];
 
     _callout = [[RNFrostedSidebar alloc] initWithImages:images selectedIndices:self.optionIndices borderColors:colors];
     _callout.isSingleSelect = YES;
     _callout.width = 110;
+    _callout.borderWidth = 5.0;
     _callout.delegate = self;
+    _callout.itemBackgroundColor = [[UIColor whiteColor] colorWithAlphaComponent:.6];
     [_callout show];
 }
 
