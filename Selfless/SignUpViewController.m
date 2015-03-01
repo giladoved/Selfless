@@ -22,7 +22,17 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    listOfCharities = @[@"Ma", @"Pa", @"Red Cross"];
+    listOfCharities = @[
+                        @"Wounded Warrior Project",
+                        @"Heifer Project International",
+                        @"American Red Cross",
+                        @"Doctors Without Borders, USA",
+                        @"ALSAC - St. Jude Children’s Research Hospital",
+                        @"World Vision",
+                        @"DAV (Disabled American Veterans) Charitable Service Trust",
+                        @"Save the Children",
+                        @"Samaritan Purse",
+                        @"United States Fund for UNICEF"];
     
     self.pickerView.dataSource = self;
     self.pickerView.delegate = self;
