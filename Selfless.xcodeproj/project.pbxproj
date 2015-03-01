@@ -13,6 +13,8 @@
 		1BC2DF841AA2A6F1003CC510 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1BC2DF831AA2A6F1003CC510 /* Images.xcassets */; };
 		1BC2DF871AA2A6F1003CC510 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1BC2DF851AA2A6F1003CC510 /* LaunchScreen.xib */; };
 		1BC2DF931AA2A6F1003CC510 /* SelflessTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1BC2DF921AA2A6F1003CC510 /* SelflessTests.m */; };
+		5EBB6B16567F97DDF038657E /* libPods-Selfless.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 32858206D0C03404289BE272 /* libPods-Selfless.a */; };
+		810492751AA2D4390009EF39 /* main_background_blur.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 810492741AA2D4390009EF39 /* main_background_blur.jpg */; };
 		810DC3F71AA2AB77006230FC /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 810DC3F61AA2AB77006230FC /* LoginViewController.m */; };
 		810DC3FA1AA2AB8E006230FC /* SignUpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 810DC3F91AA2AB8E006230FC /* SignUpViewController.m */; };
 		810DC3FD1AA2AB9B006230FC /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 810DC3FC1AA2AB9B006230FC /* MainViewController.m */; };
@@ -25,7 +27,7 @@
 		810DC40F1AA2AF1F006230FC /* gear.png in Resources */ = {isa = PBXBuildFile; fileRef = 810DC40C1AA2AF1F006230FC /* gear.png */; };
 		810DC4101AA2AF1F006230FC /* profile.png in Resources */ = {isa = PBXBuildFile; fileRef = 810DC40D1AA2AF1F006230FC /* profile.png */; };
 		810DC4111AA2AF1F006230FC /* star.png in Resources */ = {isa = PBXBuildFile; fileRef = 810DC40E1AA2AF1F006230FC /* star.png */; };
-		810DC4131AA2BC8A006230FC /* 5703437673_b99ea29830_o.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 810DC4121AA2BC8A006230FC /* 5703437673_b99ea29830_o.jpg */; };
+		810DC4131AA2BC8A006230FC /* main_background.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 810DC4121AA2BC8A006230FC /* main_background.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,6 +52,10 @@
 		1BC2DF8C1AA2A6F1003CC510 /* SelflessTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SelflessTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1BC2DF911AA2A6F1003CC510 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1BC2DF921AA2A6F1003CC510 /* SelflessTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SelflessTests.m; sourceTree = "<group>"; };
+		32858206D0C03404289BE272 /* libPods-Selfless.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Selfless.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		58CA1EED3ED4659091DC2B55 /* Pods-Selfless.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Selfless.release.xcconfig"; path = "Pods/Target Support Files/Pods-Selfless/Pods-Selfless.release.xcconfig"; sourceTree = "<group>"; };
+		6D52202ECBCB5632398508CB /* Pods-Selfless.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Selfless.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Selfless/Pods-Selfless.debug.xcconfig"; sourceTree = "<group>"; };
+		810492741AA2D4390009EF39 /* main_background_blur.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = main_background_blur.jpg; sourceTree = "<group>"; };
 		810DC3F51AA2AB77006230FC /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
 		810DC3F61AA2AB77006230FC /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
 		810DC3F81AA2AB8E006230FC /* SignUpViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SignUpViewController.h; sourceTree = "<group>"; };
@@ -66,7 +72,7 @@
 		810DC40C1AA2AF1F006230FC /* gear.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = gear.png; sourceTree = "<group>"; };
 		810DC40D1AA2AF1F006230FC /* profile.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = profile.png; sourceTree = "<group>"; };
 		810DC40E1AA2AF1F006230FC /* star.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = star.png; sourceTree = "<group>"; };
-		810DC4121AA2BC8A006230FC /* 5703437673_b99ea29830_o.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 5703437673_b99ea29830_o.jpg; sourceTree = "<group>"; };
+		810DC4121AA2BC8A006230FC /* main_background.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = main_background.jpg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +85,7 @@
 				810DC4061AA2AC79006230FC /* Foundation.framework in Frameworks */,
 				810DC4041AA2AC75006230FC /* QuartzCore.framework in Frameworks */,
 				810DC4021AA2AC71006230FC /* Accelerate.framework in Frameworks */,
+				5EBB6B16567F97DDF038657E /* libPods-Selfless.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -99,6 +106,7 @@
 				1BC2DF751AA2A6F1003CC510 /* Selfless */,
 				1BC2DF8F1AA2A6F1003CC510 /* SelflessTests */,
 				1BC2DF741AA2A6F1003CC510 /* Products */,
+				B0D8BAEBF68080F75E092019 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -123,9 +131,10 @@
 				810DC3F61AA2AB77006230FC /* LoginViewController.m */,
 				810DC3F81AA2AB8E006230FC /* SignUpViewController.h */,
 				810DC3F91AA2AB8E006230FC /* SignUpViewController.m */,
+				810492741AA2D4390009EF39 /* main_background_blur.jpg */,
 				810DC3FB1AA2AB9B006230FC /* MainViewController.h */,
 				810DC3FC1AA2AB9B006230FC /* MainViewController.m */,
-				810DC4121AA2BC8A006230FC /* 5703437673_b99ea29830_o.jpg */,
+				810DC4121AA2BC8A006230FC /* main_background.jpg */,
 				810DC3FE1AA2AC49006230FC /* RNFrostedSidebar.h */,
 				810DC3FF1AA2AC49006230FC /* RNFrostedSidebar.m */,
 				1BC2DF801AA2A6F1003CC510 /* Main.storyboard */,
@@ -170,8 +179,18 @@
 				810DC4051AA2AC79006230FC /* Foundation.framework */,
 				810DC4031AA2AC75006230FC /* QuartzCore.framework */,
 				810DC4011AA2AC71006230FC /* Accelerate.framework */,
+				32858206D0C03404289BE272 /* libPods-Selfless.a */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		B0D8BAEBF68080F75E092019 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				6D52202ECBCB5632398508CB /* Pods-Selfless.debug.xcconfig */,
+				58CA1EED3ED4659091DC2B55 /* Pods-Selfless.release.xcconfig */,
+			);
+			name = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -181,9 +200,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 1BC2DF961AA2A6F1003CC510 /* Build configuration list for PBXNativeTarget "Selfless" */;
 			buildPhases = (
+				3EA27EFD33664155AD0BC617 /* Check Pods Manifest.lock */,
 				1BC2DF6F1AA2A6F1003CC510 /* Sources */,
 				1BC2DF701AA2A6F1003CC510 /* Frameworks */,
 				1BC2DF711AA2A6F1003CC510 /* Resources */,
+				327F67EB55FE6E28A9EFF2A1 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -257,11 +278,12 @@
 			files = (
 				1BC2DF821AA2A6F1003CC510 /* Main.storyboard in Resources */,
 				1BC2DF871AA2A6F1003CC510 /* LaunchScreen.xib in Resources */,
-				810DC4131AA2BC8A006230FC /* 5703437673_b99ea29830_o.jpg in Resources */,
+				810DC4131AA2BC8A006230FC /* main_background.jpg in Resources */,
 				810DC40F1AA2AF1F006230FC /* gear.png in Resources */,
 				810DC4101AA2AF1F006230FC /* profile.png in Resources */,
 				1BC2DF841AA2A6F1003CC510 /* Images.xcassets in Resources */,
 				810DC4111AA2AF1F006230FC /* star.png in Resources */,
+				810492751AA2D4390009EF39 /* main_background_blur.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -273,6 +295,39 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		327F67EB55FE6E28A9EFF2A1 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Selfless/Pods-Selfless-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		3EA27EFD33664155AD0BC617 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		1BC2DF6F1AA2A6F1003CC510 /* Sources */ = {
@@ -343,7 +398,8 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Gilad Oved (XG726H4U35)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Gilad Oved (XG726H4U35)";
 				COPY_PHASE_STRIP = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -384,7 +440,8 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Gilad Oved (XG726H4U35)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Gilad Oved (XG726H4U35)";
 				COPY_PHASE_STRIP = YES;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -404,10 +461,11 @@
 		};
 		1BC2DF971AA2A6F1003CC510 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6D52202ECBCB5632398508CB /* Pods-Selfless.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Gilad Oved (XG726H4U35)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Gilad Oved (XG726H4U35)";
 				INFOPLIST_FILE = Selfless/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -418,10 +476,11 @@
 		};
 		1BC2DF981AA2A6F1003CC510 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 58CA1EED3ED4659091DC2B55 /* Pods-Selfless.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Gilad Oved (XG726H4U35)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Gilad Oved (XG726H4U35)";
 				INFOPLIST_FILE = Selfless/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

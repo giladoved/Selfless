@@ -8,11 +8,14 @@
 
 #import <UIKit/UIKit.h>
 #import "CardIOPaymentViewControllerDelegate.h"
+#import "JCRBlurView.h"
+
 
 @interface SignUpViewController : UIViewController
 
 - (IBAction)scanCardClicked:(id)sender;
 @property (weak, nonatomic) IBOutlet UILabel *creditCardLbl;
 @property (weak, nonatomic) IBOutlet UIPickerView *pickerView;
+@property (weak, nonatomic) IBOutlet UIImageView *blurView;
 
 @end

@@ -7,6 +7,7 @@
 //
 
 #import "LoginViewController.h"
+#import "SignUpViewController.h"
 
 @interface LoginViewController ()
 
@@ -39,5 +40,7 @@
 }
 
 - (IBAction)signUpButtonPressed:(id)sender {
+    [self performSegueWithIdentifier:@"loginToSignUp" sender:nil];
+    
 }
 @end

@@ -23,6 +23,8 @@
     
     self.pickerView.dataSource = self;
     self.pickerView.delegate = self;
+    [_blurView setImage:[UIImage imageNamed:@"main_background_blur.jpg"]];
+
 }
 
 - (void)didReceiveMemoryWarning {
@@ -93,5 +95,8 @@
     // Pass the selected object to the new view controller.
 }
 */
+
+
+
 
 @end
