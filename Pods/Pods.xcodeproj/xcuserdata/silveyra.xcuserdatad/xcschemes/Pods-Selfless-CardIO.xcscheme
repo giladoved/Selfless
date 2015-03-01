@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "7C38CC527B76D7413B3F35E1"
+               BlueprintIdentifier = "9092B906401FEFEF93C1220E"
                BuildableName = "libPods-Selfless-CardIO.a"
                BlueprintName = "Pods-Selfless-CardIO"
                ReferencedContainer = "container:Pods.xcodeproj">

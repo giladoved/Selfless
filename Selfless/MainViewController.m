@@ -21,45 +21,19 @@
     // Do any additional setup after loading the view.
     //NSLog(@"FINAL RESULTS ARE %@",_instagramResult);
     self.optionIndices = [NSMutableIndexSet indexSet];
-    [self.view setBackgroundColor:[UIColor colorWithRed:134.0/255.0 green:226.0/255.0 blue:213.0/255.0 alpha:1.0]];
-    /*
-    NSURL *URL = [NSURL URLWithString:@"http://private-anon-d3281e586-selfless.apiary-mock.com/user"];
-    NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:URL];
-    [request setHTTPMethod:@"POST"];
-    
-    [request setValue:@"application/json" forHTTPHeaderField:@"Content-Type"];
-    
-    [request setHTTPBody:[@{
-                            
-                          @"insta_id": @"1229179393",
-                          @"insta_name": @"Sungwon Chung",
-                          @"os_type": @"iOS",
-                          @"push_id": @"asdadsaf",
-                          @"auth_token": @"<auth token from instagram"
-                          }  ]];
-                          //dataUsingEncoding:NSUTF8StringEncoding
-                          NSURLSession *session = [NSURLSession sharedSession];
-                          NSURLSessionDataTask *task = [session dataTaskWithRequest:request
-                                                                  completionHandler:
-                                                        ^(NSData *data, NSURLResponse *response, NSError *error) {
-                                                            
-                                                            if (error) {
-                                                                // Handle error...
-                                                                return;
-                                                            }
-                                                            
-                                                            if ([response isKindOfClass:[NSHTTPURLResponse class]]) {
-                                                                NSLog(@"Response HTTP Status code: %ld\n", (long)[(NSHTTPURLResponse *)response statusCode]);
-                                                                NSLog(@"Response HTTP Headers:\n%@\n", [(NSHTTPURLResponse *)response allHeaderFields]);
-                                                            }
-                                                            
-                                                            NSString* body = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
-                                                            NSLog(@"Response Body:\n%@\n", body);
-                                                        }];
-                          [task resume];
-     
-     */
+    [_optionIndices addIndex:5];
 
+    [self.view setBackgroundColor:[UIColor colorWithRed:134.0/255.0 green:226.0/255.0 blue:213.0/255.0 alpha:1.0]];
+
+
+}
+
+- (void)viewDidAppear:(BOOL)animated{
+    CGRect screenRect = [[UIScreen mainScreen] bounds];
+
+    AboutViewController* newAbout = [AboutViewController new];
+    [newAbout.view setFrame:screenRect];
+    [self.modView addSubview:newAbout.view];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -70,13 +44,13 @@
 
 - (IBAction)sidebarButtonPressed:(id)sender {
     _images = @[
-                        [UIImage imageNamed:@"feed"],
-                        [UIImage imageNamed:@"profile"],
-                        [UIImage imageNamed:@"charity"],
-                        [UIImage imageNamed:@"activity"],
-                        [UIImage imageNamed:@"settings"],
-                        [UIImage imageNamed:@"about"],
-                        [UIImage imageNamed:@"logout"]
+                        [UIImage imageNamed:@"feed_white"],
+                        [UIImage imageNamed:@"profile_white"],
+                        [UIImage imageNamed:@"charity_white"],
+                        [UIImage imageNamed:@"activity_white"],
+                        [UIImage imageNamed:@"settings_white"],
+                        [UIImage imageNamed:@"about_white"],
+                        [UIImage imageNamed:@"logout_white"]
                         ];
     _colors = @[
                         [UIColor colorWithRed:1.0 green:1.0 blue:1.0 alpha:1.0],
@@ -88,12 +62,15 @@
                         [UIColor colorWithRed:1.0 green:1.0 blue:1.0 alpha:1.0]
                         ];
 
+
+
+    
     _callout = [[RNFrostedSidebar alloc] initWithImages:_images selectedIndices:self.optionIndices borderColors:_colors];
     _callout.isSingleSelect = YES;
     _callout.width = 110;
     _callout.borderWidth = 5.0;
     _callout.delegate = self;
-    _callout.itemBackgroundColor = [[UIColor whiteColor] colorWithAlphaComponent:.6];
+    _callout.itemBackgroundColor = [[UIColor whiteColor] colorWithAlphaComponent:.3];
     [_callout show];
 }
 
@@ -126,7 +103,7 @@
     _callout.width = 110;
     _callout.borderWidth = 5.0;
     _callout.delegate = self;
-    _callout.itemBackgroundColor = [[UIColor whiteColor] colorWithAlphaComponent:.6];
+    _callout.itemBackgroundColor = [[UIColor whiteColor] colorWithAlphaComponent:.3];
 }
 
 - (void)initModViewIndex:(int)index{

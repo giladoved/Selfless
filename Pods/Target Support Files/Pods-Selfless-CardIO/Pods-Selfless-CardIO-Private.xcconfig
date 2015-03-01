@@ -1,6 +1,6 @@
 #include "Pods-Selfless-CardIO.xcconfig"
 GCC_PREPROCESSOR_DEFINITIONS = $(inherited) COCOAPODS=1
-HEADER_SEARCH_PATHS = "${PODS_ROOT}/Headers/Build" "${PODS_ROOT}/Headers/Build/CardIO" "${PODS_ROOT}/Headers/Public" "${PODS_ROOT}/Headers/Public/BEMSimpleLineGraph" "${PODS_ROOT}/Headers/Public/CardIO" "${PODS_ROOT}/Headers/Public/iOS-blur"
+HEADER_SEARCH_PATHS = "${PODS_ROOT}/Headers/Build" "${PODS_ROOT}/Headers/Build/CardIO" "${PODS_ROOT}/Headers/Public" "${PODS_ROOT}/Headers/Public/AFNetworking" "${PODS_ROOT}/Headers/Public/BEMSimpleLineGraph" "${PODS_ROOT}/Headers/Public/CardIO" "${PODS_ROOT}/Headers/Public/iOS-blur"
 LIBRARY_SEARCH_PATHS = ${PODS_SELFLESS_CARDIO_LIBRARY_SEARCH_PATHS}
 OTHER_LDFLAGS = ${PODS_SELFLESS_CARDIO_OTHER_LDFLAGS} -ObjC
 PODS_ROOT = ${SRCROOT}

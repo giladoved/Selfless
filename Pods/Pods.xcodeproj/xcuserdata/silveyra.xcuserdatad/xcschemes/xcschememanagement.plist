@@ -4,6 +4,11 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
+		<key>Pods-Selfless-AFNetworking.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Pods-Selfless-BEMSimpleLineGraph.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -27,22 +32,27 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>34D5FB38D94CF2D1D9F0E49A</key>
+		<key>4E1F7F9F583C5B26DB814EDC</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>7C38CC527B76D7413B3F35E1</key>
+		<key>840B918393AE609051D2157A</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>97BA71995A8960425749F3C8</key>
+		<key>9092B906401FEFEF93C1220E</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>F7C03E3A4B421ECC0A322189</key>
+		<key>B0E1B7FBBAFA96ABDE98BC24</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>F0F954B9A5D310F919A55438</key>
 		<dict>
 			<key>primary</key>
 			<true/>

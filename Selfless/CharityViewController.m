@@ -7,8 +7,11 @@
 //
 
 #import "CharityViewController.h"
+#import "AFHTTPRequestOperationManager.h"
 
-@interface CharityViewController ()
+@interface CharityViewController () {
+    NSString *admin_token;
+}
 
 @end
 
@@ -16,7 +19,34 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view from its nib.
+    
+    admin_token = [[NSUserDefaults standardUserDefaults] stringForKey:@"admin_token"];
+    NSLog(@"amdin token: %@", admin_token);
+    //Register on the server
+    AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
+    NSDictionary *params = @{
+                             @"admin_token":admin_token
+                             };
+    [manager GET:@"http://54.67.44.197:3000/v1/charities" parameters:params success:^(AFHTTPRequestOperation *operation, id responseObject) {
+        NSLog(@"JSON: %@", responseObject);
+        //[self getCharity:<#(NSInteger)#>]
+        
+    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+        NSLog(@"Error: %@", error);
+    }];
+
+}
+
+-(void) getCharity:(NSInteger) charityID {
+    AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
+    NSString *urlStr = [NSString stringWithFormat:@"http://54.67.44.197:3000/v1/charity/%d/%@", charityID, admin_token];
+    [manager GET:urlStr parameters:nil success:^(AFHTTPRequestOperation *operation, id responseObject) {
+        NSLog(@"JSON: %@", responseObject);
+        
+        
+    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+        NSLog(@"Error: %@", error);
+    }];
 }
 
 - (void)didReceiveMemoryWarning {

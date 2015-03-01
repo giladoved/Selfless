@@ -20,43 +20,43 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="main_background.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="cBj-KD-tox">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="thc-Pu-zPI">
-                                <rect key="frame" x="256" y="283" width="89" height="33"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="33" id="Vfr-jS-t5G"/>
-                                    <constraint firstAttribute="width" constant="89" id="hRm-af-lyO"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <state key="normal" title="Sign In">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="singInButtonPressed:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="eTh-Kl-etg"/>
-                                </connections>
-                            </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="#beSelfless" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jRs-UM-82d">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Selfless" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jRs-UM-82d">
                                 <rect key="frame" x="0.0" y="123" width="600" height="88"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="88" id="Kfz-Mm-jcJ"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="39"/>
+                                <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="74"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dGc-2d-QyH">
-                                <rect key="frame" x="261" y="351" width="79" height="30"/>
+                                <rect key="frame" x="240" y="342" width="121" height="46"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="VW7-fp-f2L"/>
-                                    <constraint firstAttribute="width" constant="79" id="vEY-iJ-lFi"/>
+                                    <constraint firstAttribute="height" constant="46" id="VW7-fp-f2L"/>
+                                    <constraint firstAttribute="width" constant="121" id="vEY-iJ-lFi"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="31"/>
                                 <state key="normal" title="Sign Up">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
                                     <action selector="signUpButtonPressed:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="s3t-0A-W5C"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="thc-Pu-zPI">
+                                <rect key="frame" x="247" y="279" width="107" height="42"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="42" id="Vfr-jS-t5G"/>
+                                    <constraint firstAttribute="width" constant="107" id="hRm-af-lyO"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="34"/>
+                                <state key="normal" title="Sign In">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="singInButtonPressed:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="eTh-Kl-etg"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -67,12 +67,12 @@
                             <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="cBj-KD-tox" secondAttribute="bottom" id="W1P-qf-w8w"/>
                             <constraint firstAttribute="trailing" secondItem="jRs-UM-82d" secondAttribute="trailing" id="fhx-s0-upR"/>
                             <constraint firstItem="cBj-KD-tox" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="iaT-If-yXT"/>
-                            <constraint firstItem="thc-Pu-zPI" firstAttribute="top" secondItem="jRs-UM-82d" secondAttribute="bottom" constant="72" id="j4W-gY-ibx"/>
+                            <constraint firstItem="thc-Pu-zPI" firstAttribute="top" secondItem="jRs-UM-82d" secondAttribute="bottom" constant="68" id="j4W-gY-ibx"/>
                             <constraint firstItem="cBj-KD-tox" firstAttribute="top" secondItem="kh9-bI-dsS" secondAttribute="top" id="jcS-LT-LaV"/>
                             <constraint firstAttribute="centerX" secondItem="dGc-2d-QyH" secondAttribute="centerX" id="kTh-9b-jpc"/>
                             <constraint firstAttribute="trailing" secondItem="cBj-KD-tox" secondAttribute="trailing" id="n98-MW-mqU"/>
                             <constraint firstAttribute="centerY" secondItem="thc-Pu-zPI" secondAttribute="centerY" id="o6e-CW-gYb"/>
-                            <constraint firstItem="dGc-2d-QyH" firstAttribute="top" secondItem="thc-Pu-zPI" secondAttribute="bottom" constant="35" id="xlo-oE-LE1"/>
+                            <constraint firstItem="dGc-2d-QyH" firstAttribute="top" secondItem="thc-Pu-zPI" secondAttribute="bottom" constant="21" id="xlo-oE-LE1"/>
                         </constraints>
                     </view>
                     <connections>
@@ -319,6 +319,6 @@
         <image name="main_background_blur.jpg" width="2657" height="4000"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="cwx-Xd-VeI"/>
+        <segue reference="Ue3-ih-nZ3"/>
     </inferredMetricsTieBreakers>
 </document>

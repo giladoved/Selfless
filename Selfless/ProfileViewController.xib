@@ -121,7 +121,7 @@
                     </connections>
                 </view>
             </subviews>
-            <color key="backgroundColor" red="0.054901960780000002" green="0.63529411759999999" blue="0.61176470589999998" alpha="1" colorSpace="calibratedRGB"/>
+            <color key="backgroundColor" red="0.054901960784313725" green="0.63529411764705879" blue="0.61176470588235299" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
                 <constraint firstAttribute="centerX" secondItem="bXx-nr-MUh" secondAttribute="centerX" id="0Yz-T4-dzd"/>
                 <constraint firstItem="bXx-nr-MUh" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="8" id="0ij-iV-2pW"/>
